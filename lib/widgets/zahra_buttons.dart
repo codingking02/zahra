@@ -5,6 +5,7 @@ Widget zahraButton(
   BuildContext context,
   Widget screen,
   Widget text,
+  void Function() ontap,
 ) {
   return Container(
     width: double.infinity,
@@ -35,6 +36,7 @@ Widget zahraButton(
             builder: (context) => screen,
           ),
         );
+        ontap();
       },
       style: ElevatedButton.styleFrom(
         foregroundColor: textButtonColor,

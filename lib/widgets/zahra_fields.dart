@@ -3,20 +3,16 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 Widget textFormField(
-  TextEditingController controller,
-  void Function() onFieldSubmitted,
-  String hintText,
-) {
+    TextEditingController controller,
+    void Function() onFieldSubmitted,
+    String hintText,
+    TextInputType textInputType,
+    TextInputFormatter textInputFormatter) {
   return TextFormField(
     onFieldSubmitted: (value) => onFieldSubmitted,
     controller: controller,
-    keyboardType: TextInputType.text,
+    keyboardType: textInputType,
     textAlign: TextAlign.right,
-    inputFormatters: [
-      FilteringTextInputFormatter.allow(
-        RegExp(r'[ء-ي\s]'),
-      ),
-    ],
     textInputAction: TextInputAction.done,
     cursorColor: const Color.fromRGBO(222, 208, 182, 1),
     enableSuggestions: true,
@@ -24,6 +20,9 @@ Widget textFormField(
       color: const Color.fromRGBO(30, 30, 30, 0.5),
       decorationThickness: 0,
     ),
+    inputFormatters: [
+      textInputFormatter,
+    ],
     decoration: InputDecoration(
       contentPadding: const EdgeInsets.only(
         left: 12,
@@ -93,11 +92,6 @@ Widget passwordtextFormField(
     controller: controller,
     keyboardType: TextInputType.text,
     textAlign: TextAlign.right,
-    inputFormatters: [
-      FilteringTextInputFormatter.allow(
-        RegExp(r'[ء-ي\s]'),
-      ),
-    ],
     textInputAction: TextInputAction.done,
     cursorColor: const Color.fromRGBO(222, 208, 182, 1),
     enableSuggestions: true,

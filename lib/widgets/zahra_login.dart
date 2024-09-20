@@ -22,7 +22,7 @@ Widget rowWidgets(
           ),
           Transform.translate(
             offset: Offset(
-              MediaQuery.of(context).size.width * 0.03,
+              MediaQuery.of(context).size.width * 0.02,
               0,
             ),
             child: Row(

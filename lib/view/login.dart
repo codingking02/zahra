@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:zahra/view/home_screen.dart';
 import 'package:zahra/view/register.dart';
 import 'package:zahra/widgets/zahra_boxes.dart';
 import 'package:zahra/widgets/zahra_buttons.dart';
 import 'package:zahra/widgets/zahra_colors.dart';
+import 'package:zahra/widgets/zahra_container.dart';
 import 'package:zahra/widgets/zahra_fields.dart';
 import 'package:zahra/widgets/zahra_login.dart';
 import 'package:zahra/widgets/zahra_texts.dart';
@@ -14,7 +17,7 @@ class Loginless extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Login();
+    return const Login();
   }
 }
 
@@ -31,7 +34,7 @@ class _LoginState extends State<Login> {
   final FocusNode _passwordFocusNode = FocusNode();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  bool iftapped = false;
+  bool iftapped = true;
 
   @override
   void dispose() {
@@ -46,6 +49,8 @@ class _LoginState extends State<Login> {
     // Unfocus all fields when submitting
     _nameFocusNode.unfocus();
     _passwordFocusNode.unfocus();
+    String name = _nameController.text;
+    String password = _passwordController.text;
 
     // Print the input values
   }
@@ -79,29 +84,13 @@ class _LoginState extends State<Login> {
                 SizedBox(
                   height: mediaqueryheight(0.02, context),
                 ),
-                Expanded(
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color.fromRGBO(0, 0, 0, 0.1),
-                          blurRadius: 10,
-                          spreadRadius: 0,
-                          offset: Offset(0, -4),
-                        ),
-                      ],
-                      color: Color.fromRGBO(249, 243, 228, 1),
-                      borderRadius: BorderRadius.vertical(
-                        top: Radius.circular(
-                          30,
-                        ),
-                      ),
+                zahraContainer(
+                  mychild: Container(
+                    width: double.infinity,
+                    margin: EdgeInsets.symmetric(
+                      horizontal: mediaquerywidth(0.05, context),
                     ),
-                    child: Container(
-                      width: double.infinity,
-                      margin: EdgeInsets.symmetric(
-                        horizontal: mediaquerywidth(0.05, context),
-                      ),
+                    child: SingleChildScrollView(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
@@ -123,6 +112,9 @@ class _LoginState extends State<Login> {
                                   _nameController,
                                   _onFieldSubmitted,
                                   'أسم المستخدم / رقم الهاتف',
+                                  TextInputType.name,
+                                  FilteringTextInputFormatter
+                                      .singleLineFormatter,
                                 ),
                                 SizedBox(
                                   height: mediaqueryheight(0.02, context),
@@ -158,10 +150,11 @@ class _LoginState extends State<Login> {
                           ),
                           zahraButton(
                             context,
-                            Register(),
+                            HomeScreen(),
                             SvgPicture.asset(
                               'assets/login.svg',
                             ),
+                            _submit,
                           ),
                           SizedBox(
                             height: mediaqueryheight(0.02, context),

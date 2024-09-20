@@ -36,6 +36,7 @@ class SplashScreen extends StatelessWidget {
               SvgPicture.asset(
                 'assets/starttext.svg',
               ),
+              () {},
             ),
           ),
         ],

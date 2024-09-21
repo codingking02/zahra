@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:zahra/widgets/zahra_colors.dart';
 
 Widget zahraButton(
@@ -54,6 +55,33 @@ Widget zahraButton(
         ),
       ),
       child: text,
+    ),
+  );
+}
+
+Widget zharabackbutton(BuildContext context) {
+  return SizedBox(
+    width: double.infinity,
+    height: 54,
+    child: OutlinedButton.icon(
+      onPressed: () {
+        Navigator.pop(context);
+      },
+      label: SvgPicture.asset('assets/back.svg'),
+      iconAlignment: IconAlignment.end,
+      icon: SvgPicture.asset('assets/arrowback.svg'),
+      style: OutlinedButton.styleFrom(
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(
+              20,
+            ),
+          ),
+        ),
+        side: const BorderSide(
+          color: Color.fromRGBO(178, 103, 94, 1),
+        ),
+      ),
     ),
   );
 }

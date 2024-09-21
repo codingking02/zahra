@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -97,17 +99,17 @@ class _LoginState extends State<Login> {
                           SizedBox(
                             height: mediaqueryheight(0.05, context),
                           ),
-                          zahratexts(
-                            'أسم المستخدم',
-                          ),
-                          SizedBox(
-                            height: mediaqueryheight(0.02, context),
-                          ),
                           Form(
                             key: _formKey,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
+                                zahratexts(
+                                  'أسم المستخدم',
+                                ),
+                                SizedBox(
+                                  height: mediaqueryheight(0.02, context),
+                                ),
                                 textFormField(
                                   _nameController,
                                   _onFieldSubmitted,

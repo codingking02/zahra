@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -8,7 +10,6 @@ import 'package:zahra/widgets/zahra_buttons.dart';
 import 'package:zahra/widgets/zahra_colors.dart';
 import 'package:zahra/widgets/zahra_container.dart';
 import 'package:zahra/widgets/zahra_fields.dart';
-import 'package:zahra/widgets/zahra_login.dart';
 import 'package:zahra/widgets/zahra_texts.dart';
 
 class Registeress extends StatelessWidget {
@@ -29,9 +30,12 @@ class Register extends StatefulWidget {
 
 class _RegisterState extends State<Register> {
   final _formKey = GlobalKey<FormState>();
-  final FocusNode _nameFocusNode = FocusNode();
-  final FocusNode _passwordFocusNode = FocusNode();
+
   final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _phonenumbercontroller = TextEditingController();
+  final TextEditingController _emailcontroller = TextEditingController();
+  final TextEditingController _confirmpasswordcontroller =
+      TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   bool iftapped = false;
 
@@ -39,8 +43,10 @@ class _RegisterState extends State<Register> {
   void dispose() {
     _nameController.dispose();
     _passwordController.dispose();
-    _nameFocusNode.dispose();
-    _passwordFocusNode.dispose();
+    _emailcontroller.dispose();
+    _phonenumbercontroller.dispose();
+    _confirmpasswordcontroller.dispose();
+
     super.dispose();
   }
 
@@ -104,8 +110,14 @@ class _RegisterState extends State<Register> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
+                                SizedBox(
+                                  height: mediaqueryheight(0.015, context),
+                                ),
                                 zahratexts(
                                   'أسم المستخدم',
+                                ),
+                                SizedBox(
+                                  height: mediaqueryheight(0.015, context),
                                 ),
                                 textFormField(
                                   _nameController,
@@ -115,19 +127,70 @@ class _RegisterState extends State<Register> {
                                   FilteringTextInputFormatter
                                       .singleLineFormatter,
                                 ),
+                                SizedBox(
+                                  height: mediaqueryheight(0.015, context),
+                                ),
                                 zahratexts(
-                                  'أسم المستخدم',
+                                  'رقم الهاتف',
+                                ),
+                                SizedBox(
+                                  height: mediaqueryheight(0.015, context),
                                 ),
                                 textFormField(
-                                  _nameController,
+                                  _phonenumbercontroller,
                                   _onFieldSubmitted,
-                                  'أسم المستخدم / رقم الهاتف',
-                                  TextInputType.name,
+                                  '01000000000000',
+                                  TextInputType.phone,
+                                  FilteringTextInputFormatter.digitsOnly,
+                                ),
+                                SizedBox(
+                                  height: mediaqueryheight(0.015, context),
+                                ),
+                                zahratexts(
+                                  'البريد الإلكتروني',
+                                ),
+                                SizedBox(
+                                  height: mediaqueryheight(0.015, context),
+                                ),
+                                textFormField(
+                                  _emailcontroller,
+                                  _onFieldSubmitted,
+                                  'diijir_ihsfglp@email.com',
+                                  TextInputType.emailAddress,
                                   FilteringTextInputFormatter
                                       .singleLineFormatter,
+                                ),
+                                SizedBox(
+                                  height: mediaqueryheight(0.015, context),
                                 ),
                                 zahratexts(
                                   'كلمة المرور',
+                                ),
+                                SizedBox(
+                                  height: mediaqueryheight(0.015, context),
+                                ),
+                                passwordtextFormField(
+                                  _passwordController,
+                                  _onFieldSubmitted,
+                                  '***************',
+                                  Image.asset(
+                                    'assets/eye.png',
+                                  ),
+                                  () {
+                                    setState(() {
+                                      iftapped = !iftapped;
+                                    });
+                                  },
+                                  iftapped,
+                                ),
+                                SizedBox(
+                                  height: mediaqueryheight(0.02, context),
+                                ),
+                                zahratexts(
+                                  'تأكيد كلمة المرور',
+                                ),
+                                SizedBox(
+                                  height: mediaqueryheight(0.02, context),
                                 ),
                                 passwordtextFormField(
                                   _passwordController,
@@ -146,16 +209,25 @@ class _RegisterState extends State<Register> {
                               ],
                             ),
                           ),
+                          SizedBox(
+                            height: mediaqueryheight(
+                              0.025,
+                              context,
+                            ),
+                          ),
                           zahraButton(
                             context,
                             HomeScreen(),
                             SvgPicture.asset(
-                              'assets/login.svg',
+                              'assets/register.svg',
                             ),
                             _submit,
                           ),
                           SizedBox(
                             height: mediaqueryheight(0.02, context),
+                          ),
+                          zharabackbutton(
+                            context,
                           ),
                         ],
                       ),

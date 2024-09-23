@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:zahra/widgets/zahra_colors.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:zahra/custom/zahra_boxes.dart';
+import 'package:zahra/custom/zahra_colors.dart';
 
 Widget zahraButton(
   BuildContext context,
@@ -81,6 +83,50 @@ Widget zharabackbutton(BuildContext context) {
         side: const BorderSide(
           color: Color.fromRGBO(178, 103, 94, 1),
         ),
+      ),
+    ),
+  );
+}
+
+Widget zahragetlocationbutton(BuildContext context) {
+  return SizedBox(
+    width: double.infinity,
+    height: 36,
+    child: OutlinedButton(
+      onPressed: () {},
+      style: OutlinedButton.styleFrom(
+        padding: EdgeInsets.symmetric(
+          horizontal: mediaquerywidth(
+            0.02,
+            context,
+          ),
+        ), // Remove default padding
+        backgroundColor: const Color.fromRGBO(222, 208, 182, 0.2),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(8),
+          ),
+        ),
+        side: const BorderSide(
+          width: 1,
+          color: Color(0xffDED0B6),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SvgPicture.asset(
+            'assets/map.svg',
+          ),
+          Text(
+            'حدد موقعكِ',
+            style: GoogleFonts.cairo(
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+              color: const Color.fromRGBO(30, 30, 30, 0.5),
+            ),
+          ),
+        ],
       ),
     ),
   );

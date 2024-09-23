@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:zahra/view/login.dart';
-import 'package:zahra/widgets/zahra_boxes.dart';
-import 'package:zahra/widgets/zahra_buttons.dart';
+import 'package:zahra/view/screens/login.dart';
+import 'package:zahra/custom/zahra_boxes.dart';
+import 'package:zahra/custom/zahra_buttons.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});

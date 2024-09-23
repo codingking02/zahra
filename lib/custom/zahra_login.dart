@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:zahra/widgets/zahra_texts.dart';
+import 'package:zahra/custom/zahra_texts.dart';
 
 Widget rowWidgets(
   BuildContext context,

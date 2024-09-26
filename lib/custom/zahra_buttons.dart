@@ -131,3 +131,67 @@ Widget zahragetlocationbutton(BuildContext context) {
     ),
   );
 }
+
+Widget hospitalButton(String text, Widget gotoWidget, BuildContext context) {
+  return Container(
+    width: double.infinity,
+    height: 57,
+    decoration: const BoxDecoration(
+      boxShadow: [
+        BoxShadow(
+          offset: Offset(
+            0,
+            4,
+          ),
+          blurRadius: 10,
+          spreadRadius: 0,
+          color: Color.fromRGBO(0, 0, 0, 0.08),
+        )
+      ],
+    ),
+    child: OutlinedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => gotoWidget,
+          ),
+        );
+      },
+      style: OutlinedButton.styleFrom(
+        backgroundColor: const Color.fromRGBO(249, 243, 228, 1),
+        padding: EdgeInsets.symmetric(
+          horizontal: mediaqueryheight(0.01, context),
+        ),
+        elevation: 100,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(
+              8,
+            ),
+          ),
+        ),
+        side: const BorderSide(
+          color: Color.fromRGBO(222, 208, 182, 1),
+          width: 1,
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SvgPicture.asset(
+            'assets/leftarrow.svg',
+          ),
+          Text(
+            text,
+            style: GoogleFonts.cairo(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              color: const Color.fromRGBO(30, 30, 30, 1),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}

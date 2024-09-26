@@ -2,20 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:zahra/view/drawerwidgets/grills_drawer.dart';
 import 'package:zahra/view/drawerwidgets/hospital_drawerwidget.dart';
 import 'package:zahra/view/screens/hospitals.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/custom/zahra_fields.dart';
 
-class MedicalServices extends StatefulWidget {
-  const MedicalServices({super.key});
+class Restaurants extends StatefulWidget {
+  const Restaurants({super.key});
 
   @override
-  State<MedicalServices> createState() => _MedicalServicesState();
+  State<Restaurants> createState() => _RestaurantsState();
 }
 
-class _MedicalServicesState extends State<MedicalServices> {
+class _RestaurantsState extends State<Restaurants> {
   // Create a GlobalKey for the Scaffold
   final TextEditingController searchcontroller = TextEditingController();
   final FocusNode focusNode = FocusNode();
@@ -89,7 +90,7 @@ class _MedicalServicesState extends State<MedicalServices> {
               ),
               Center(
                 child: Text(
-                  'خدمات طبيه',
+                  'مطاعم وكافيهات',
                   style: GoogleFonts.cairo(
                     fontSize: 28,
                     fontWeight: FontWeight.w700,
@@ -136,20 +137,20 @@ class _MedicalServicesState extends State<MedicalServices> {
                                 scrollDirection: Axis.horizontal,
                                 children: [
                                   pageviewwidgets(
-                                    'assets/pharmacy1.png',
-                                    'صيدليه العاصمة',
+                                    'assets/restaurant1.png',
+                                    'برجر المندي',
                                   ),
                                   pageviewwidgets(
-                                    'assets/pharmacy2.png',
-                                    'صيدليه زهرة',
+                                    'assets/restaurant2.png',
+                                    'مشاوي العاصمه',
                                   ),
                                   pageviewwidgets(
-                                    'assets/pharmacy3.png',
-                                    'صيدليه د. احمد',
+                                    'assets/restaurant3.png',
+                                    'اكل بيتي',
                                   ),
                                   pageviewwidgets(
-                                    'assets/pharmacy4.png',
-                                    'صيدليه د. خالد',
+                                    'assets/restaurant4.png',
+                                    'بيتزا الصاوي',
                                   ),
                                 ],
                               ),
@@ -242,16 +243,16 @@ class _MedicalServicesState extends State<MedicalServices> {
                                           context,
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                                HospitalDrawerwidget(),
+                                                GrillsDrawer(),
                                           ),
                                         );
                                       },
                                       child: Image.asset(
-                                        'assets/hospitals.png',
+                                        'assets/grills.png',
                                       ),
                                     ),
                                     Image.asset(
-                                      'assets/pharmacys.png',
+                                      'assets/homefood.png',
                                     ),
                                   ],
                                 ),

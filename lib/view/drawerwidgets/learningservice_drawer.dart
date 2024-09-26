@@ -4,23 +4,24 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/hospitals.dart';
+import 'package:zahra/view/screens/learning_services.dart';
 import 'package:zahra/view/screens/medical_services.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
 
-class HospitalDrawerwidget extends StatefulWidget {
-  const HospitalDrawerwidget({super.key});
+class LearningserviceDrawer extends StatefulWidget {
+  const LearningserviceDrawer({super.key});
   @override
-  State<HospitalDrawerwidget> createState() => _HospitalDrawerwidgetState();
+  State<LearningserviceDrawer> createState() => _LearningserviceDrawerState();
 }
 
-class _HospitalDrawerwidgetState extends State<HospitalDrawerwidget> {
+class _LearningserviceDrawerState extends State<LearningserviceDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const Hospitals();
+    selectedWidget = const LearningServices();
     super.initState();
   }
 

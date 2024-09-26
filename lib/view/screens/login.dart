@@ -6,7 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/register.dart';
-import 'package:zahra/view/drawerwidgets/zahra_drawercontroller.dart';
+import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_colors.dart';
@@ -156,7 +156,7 @@ class _LoginState extends State<Login> {
                               ),
                               zahraButton(
                                 context,
-                                const ZahraDrawerWidgetController(),
+                                const HomescreenDrawerwidget(),
                                 SvgPicture.asset(
                                   'assets/login.svg',
                                 ),

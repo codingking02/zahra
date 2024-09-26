@@ -2,28 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:zahra/view/screens/grills.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/hospitals.dart';
 import 'package:zahra/view/screens/medical_services.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
 
-class ZahraDrawerWidgetController extends StatefulWidget {
-  const ZahraDrawerWidgetController({super.key});
+class GrillsDrawer extends StatefulWidget {
+  const GrillsDrawer({super.key});
   @override
-  State<ZahraDrawerWidgetController> createState() =>
-      _ZahraDrawerWidgetControllerState();
+  State<GrillsDrawer> createState() => _GrillsDrawerState();
 }
 
-class _ZahraDrawerWidgetControllerState
-    extends State<ZahraDrawerWidgetController> {
+class _GrillsDrawerState extends State<GrillsDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const HomeScreen();
+    selectedWidget = const Grills();
     super.initState();
   }
 
@@ -59,7 +58,8 @@ class _ZahraDrawerWidgetControllerState
   Widget build(BuildContext context) {
     bool isMedicalServices =
         selectedWidget.runtimeType == const HomeScreen().runtimeType ||
-            selectedWidget.runtimeType == const Hospitals().runtimeType;
+            selectedWidget.runtimeType == const Hospitals().runtimeType ||
+            selectedWidget.runtimeType == const MedicalServices().runtimeType;
     return SafeArea(
       top: false,
       child: Scaffold(

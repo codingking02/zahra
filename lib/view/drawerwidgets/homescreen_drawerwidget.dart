@@ -8,19 +8,20 @@ import 'package:zahra/view/screens/medical_services.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
 
-class HospitalDrawerwidget extends StatefulWidget {
-  const HospitalDrawerwidget({super.key});
+class HomescreenDrawerwidget extends StatefulWidget {
+  const HomescreenDrawerwidget({super.key});
   @override
-  State<HospitalDrawerwidget> createState() => _HospitalDrawerwidgetState();
+  State<HomescreenDrawerwidget> createState() => _HomescreenDrawerwidgetState();
 }
 
-class _HospitalDrawerwidgetState extends State<HospitalDrawerwidget> {
+class _HomescreenDrawerwidgetState extends State<HomescreenDrawerwidget> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const Hospitals();
+    selectedWidget = const HomeScreen();
     super.initState();
   }
 
@@ -81,13 +82,8 @@ class _HospitalDrawerwidgetState extends State<HospitalDrawerwidget> {
                 onTap: () {
                   Navigator.pop(context);
                 },
-                child: InkWell(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: SvgPicture.asset(
-                    'assets/arrowupleft.svg',
-                  ),
+                child: SvgPicture.asset(
+                  'assets/arrowupleft.svg',
                 ),
               ),
               label: 'عودة',

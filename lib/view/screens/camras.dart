@@ -6,8 +6,8 @@ import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 
-class Hospitals extends StatelessWidget {
-  const Hospitals({super.key});
+class Cameras extends StatelessWidget {
+  const Cameras({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class Hospitals extends StatelessWidget {
             ),
             Center(
               child: Text(
-                'مستشفيات و وحدات صحية',
+                'تركيب كاميرات',
                 style: GoogleFonts.cairo(
                   fontSize: 28,
                   fontWeight: FontWeight.w700,
@@ -39,7 +39,7 @@ class Hospitals extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'مستشفي بدر الجامعي',
+              'زهرة تكنولوجي',
               const HomescreenDrawerwidget(),
               context,
             ),
@@ -50,7 +50,7 @@ class Hospitals extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'مستشفي العاصمة',
+              'م. احمد حسين لتركيب الكاميرات',
               const HomeScreen(),
               context,
             ),
@@ -61,18 +61,7 @@ class Hospitals extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'عيادات تخصصية',
-              const HomeScreen(),
-              context,
-            ),
-            SizedBox(
-              height: mediaqueryheight(
-                0.03,
-                context,
-              ),
-            ),
-            hospitalButton(
-              'وحدات صحية',
+              'شركة الفتح',
               const HomeScreen(),
               context,
             ),

@@ -7,6 +7,7 @@ import 'package:zahra/view/screens/hospitals.dart';
 import 'package:zahra/view/screens/medical_services.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
+import 'package:zahra/view/screens/transportation.dart';
 
 class MedicalservicesDrawerwidget extends StatefulWidget {
   const MedicalservicesDrawerwidget({super.key});
@@ -58,7 +59,8 @@ class _MedicalservicesDrawerwidgetState
   Widget build(BuildContext context) {
     bool isMedicalServices =
         selectedWidget.runtimeType == const HomeScreen().runtimeType ||
-            selectedWidget.runtimeType == const Hospitals().runtimeType;
+            selectedWidget.runtimeType == const Hospitals().runtimeType ||
+            selectedWidget.runtimeType == const MedicalServices().runtimeType;
     return SafeArea(
       top: false,
       child: Scaffold(
@@ -162,18 +164,18 @@ class _MedicalservicesDrawerwidgetState
                         zahraTextButton(
                           'مطاعم وكافيهات',
                           selectedWidget.runtimeType ==
-                                  const MedicalServices().runtimeType
+                                  const Transportation().runtimeType
                               ? FontWeight.w700
                               : FontWeight.w400,
                           selectedWidget.runtimeType ==
-                                  const MedicalServices().runtimeType
+                                  const Transportation().runtimeType
                               ? const Color.fromRGBO(30, 30, 30, 1)
                               : const Color.fromRGBO(178, 103, 94, 1),
                           selectedWidget.runtimeType ==
-                                  const MedicalServices().runtimeType
+                                  const Transportation().runtimeType
                               ? SvgPicture.asset('assets/blackfood.svg')
                               : SvgPicture.asset('assets/redfood.svg'),
-                          const MedicalServices(),
+                          const Transportation(),
                         ),
                       ],
                     ),

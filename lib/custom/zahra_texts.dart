@@ -31,3 +31,14 @@ Widget zahratexts12px(
     ),
   );
 }
+
+Widget getbadrhospitaltexts(String text) {
+  return Text(
+    text,
+    style: GoogleFonts.cairo(
+      fontSize: 16,
+      fontWeight: FontWeight.w400,
+      color: const Color.fromRGBO(30, 30, 30, 1),
+    ),
+  );
+}

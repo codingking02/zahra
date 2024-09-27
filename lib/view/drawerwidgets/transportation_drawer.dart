@@ -7,7 +7,6 @@ import 'package:zahra/view/screens/hospitals.dart';
 import 'package:zahra/view/screens/medical_services.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
-import 'package:zahra/view/screens/public_service.dart';
 import 'package:zahra/view/screens/transportation.dart';
 
 class TransportationDrawer extends StatefulWidget {

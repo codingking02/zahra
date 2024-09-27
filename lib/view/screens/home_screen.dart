@@ -1,14 +1,10 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/view/drawerwidgets/medicalservices_drawerwidget.dart';
-import 'package:zahra/view/screens/login.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
-import 'package:zahra/custom/zahra_buttons.dart';
-import 'package:zahra/custom/zahra_colors.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/custom/zahra_fields.dart';
-import 'package:zahra/view/screens/medical_services.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

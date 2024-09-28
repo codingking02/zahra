@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
+import 'package:zahra/custom/zahra_colors.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/custom/zahra_texts.dart';
-import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
-import 'package:zahra/view/screens/home_screen.dart';
 
 class TrainStation extends StatelessWidget {
   const TrainStation({super.key});
@@ -35,7 +34,7 @@ class TrainStation extends StatelessWidget {
             ),
             SizedBox(
               height: mediaqueryheight(
-                0.05,
+                0.03,
                 context,
               ),
             ),
@@ -44,45 +43,49 @@ class TrainStation extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    zahraboldtexts(': العنوان'),
+                    zahraboldtexts(
+                      ': العنوان',
+                    ),
                     SizedBox(
                       height: mediaqueryheight(
-                        0.025,
+                        0.015,
                         context,
                       ),
                     ),
-                    getnormaltexts('اضافة العنوان بالتفصيل'),
+                    getnormaltexts(
+                      'اضافة العنوان بالتفصيل',
+                    ),
                     SizedBox(
                       height: mediaqueryheight(
-                        0.025,
+                        0.015,
                         context,
                       ),
                     ),
                     zahraboldtexts('مواعيد القطار'),
                     SizedBox(
                       height: mediaqueryheight(
-                        0.025,
+                        0.015,
                         context,
                       ),
                     ),
                     getnormaltexts('من الساعة 6  صباحا و حتى الساعة 11 مساء'),
                     SizedBox(
                       height: mediaqueryheight(
-                        0.025,
+                        0.015,
                         context,
                       ),
                     ),
                     zahraboldtexts('-: ارقام التليفون'),
                     SizedBox(
                       height: mediaqueryheight(
-                        0.025,
+                        0.015,
                         context,
                       ),
                     ),
-                    getnormaltexts('010000000000 -024679458 - 0254765475'),
+                    getnormaltexts('010000000000 -024679458 - 0154765475'),
                     SizedBox(
                       height: mediaqueryheight(
-                        0.025,
+                        0.05,
                         context,
                       ),
                     ),

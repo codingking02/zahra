@@ -14,6 +14,19 @@ Widget zahratexts(
   );
 }
 
+Widget zahraboldtexts(
+  String text,
+) {
+  return Text(
+    text,
+    style: GoogleFonts.cairo(
+      fontSize: 20,
+      fontWeight: FontWeight.w700,
+      color: const Color(0xff1E1E1E),
+    ),
+  );
+}
+
 Widget zahratexts12px(
   String text,
 ) {

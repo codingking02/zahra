@@ -195,3 +195,66 @@ Widget hospitalButton(String text, Widget gotoWidget, BuildContext context) {
     ),
   );
 }
+
+Widget zahragotolocation(
+  BuildContext context,
+  Widget screen,
+  void Function() ontap,
+) {
+  return Container(
+    width: double.infinity,
+    height: 54,
+    decoration: const BoxDecoration(
+      boxShadow: [
+        BoxShadow(
+          offset: Offset(
+            0,
+            4,
+          ),
+          blurRadius: 15,
+          spreadRadius: 0,
+          color: Color.fromRGBO(
+            0,
+            0,
+            0,
+            0.08,
+          ),
+        ),
+      ],
+    ),
+    child: ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => screen,
+          ),
+        );
+        ontap();
+      },
+      style: ElevatedButton.styleFrom(
+        foregroundColor: textButtonColor,
+        backgroundColor: bgButtonColor,
+        // textStyle: GoogleFonts.cairo(
+        //   fontSize: 30,
+        //   fontWeight: FontWeight.w700,
+        // ),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(
+              20,
+            ),
+          ),
+        ),
+      ),
+      child: Text(
+        'اذهب للخريطه',
+        style: GoogleFonts.cairo(
+          fontSize: 16,
+          fontWeight: FontWeight.w400,
+          color: const Color.fromRGBO(249, 243, 228, 1),
+        ),
+      ),
+    ),
+  );
+}

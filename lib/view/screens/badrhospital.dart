@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_colors.dart';
 import 'package:zahra/custom/zahra_texts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
+import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
 
 class Badrhospital extends StatefulWidget {
   const Badrhospital({super.key});
@@ -140,7 +143,22 @@ class _BadrhospitalState extends State<Badrhospital> {
                         width: double.infinity,
                         child: Image.asset(
                           'assets/location.png',
+                          fit: BoxFit.fill,
                         ),
+                      ),
+                      SizedBox(
+                        height: mediaqueryheight(0.015, context),
+                      ),
+                      zahraButton(
+                        context,
+                        const HomescreenDrawerwidget(),
+                        SvgPicture.asset(
+                          'assets/starttext.svg',
+                        ),
+                        () {},
+                      ),
+                      SizedBox(
+                        height: mediaqueryheight(0.015, context),
                       ),
                     ],
                   ),

@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
+import 'package:zahra/view/drawerwidgets/badrhospital_drawer.dart';
 import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 
@@ -40,7 +41,7 @@ class Hospitals extends StatelessWidget {
             ),
             hospitalButton(
               'مستشفي بدر الجامعي',
-              const HomescreenDrawerwidget(),
+              const BadrhospitalDrawer(),
               context,
             ),
             SizedBox(

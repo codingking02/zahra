@@ -9,6 +9,7 @@ import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
 import 'package:zahra/view/screens/train_station.dart';
 import 'package:zahra/view/screens/transportation.dart';
+import 'package:zahra/custom/zahra_colors.dart';
 
 class TrainStationDrawer extends StatefulWidget {
   const TrainStationDrawer({super.key});

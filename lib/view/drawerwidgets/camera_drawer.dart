@@ -9,13 +9,13 @@ import 'package:zahra/view/screens/medical_services.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
 
-class CamerasDarawer extends StatefulWidget {
-  const CamerasDarawer({super.key});
+class CameraDrawer extends StatefulWidget {
+  const CameraDrawer({super.key});
   @override
-  State<CamerasDarawer> createState() => _CamerasDarawerState();
+  State<CameraDrawer> createState() => _CameraDrawerState();
 }
 
-class _CamerasDarawerState extends State<CamerasDarawer> {
+class _CameraDrawerState extends State<CameraDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 

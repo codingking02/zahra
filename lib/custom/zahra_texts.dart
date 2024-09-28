@@ -32,7 +32,7 @@ Widget zahratexts12px(
   );
 }
 
-Widget getbadrhospitaltexts(String text) {
+Widget getnormaltexts(String text) {
   return Text(
     text,
     style: GoogleFonts.cairo(

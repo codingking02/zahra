@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_colors.dart';
@@ -35,7 +34,7 @@ class _BadrhospitalState extends State<Badrhospital> {
               ),
               Center(
                 child: Text(
-                  'خدمات طبيه',
+                  'مستشفي بدر الجامعي',
                   style: GoogleFonts.cairo(
                     fontSize: 28,
                     fontWeight: FontWeight.w700,
@@ -73,13 +72,13 @@ class _BadrhospitalState extends State<Badrhospital> {
                       SizedBox(
                         height: mediaqueryheight(0.015, context),
                       ),
-                      getbadrhospitaltexts(
+                      getnormaltexts(
                         '24 ساعة ',
                       ),
                       SizedBox(
                         height: mediaqueryheight(0.015, context),
                       ),
-                      getbadrhospitaltexts(
+                      getnormaltexts(
                         'جميع  التخصصات',
                       ),
                       SizedBox(
@@ -87,14 +86,14 @@ class _BadrhospitalState extends State<Badrhospital> {
                       ),
                       Flexible(
                         fit: FlexFit.loose,
-                        child: getbadrhospitaltexts(
+                        child: getnormaltexts(
                           'العيادات الخارجية من الساعة 8 صباحا حتى 1 ظهرا',
                         ),
                       ),
                       SizedBox(
                         height: mediaqueryheight(0.015, context),
                       ),
-                      getbadrhospitaltexts(
+                      getnormaltexts(
                         'قسم الطوارئ متاح 24 ساعه',
                       ),
                       SizedBox(
@@ -111,17 +110,17 @@ class _BadrhospitalState extends State<Badrhospital> {
                       SizedBox(
                         height: mediaqueryheight(0.015, context),
                       ),
-                      getbadrhospitaltexts('اضافة العنوان بالتفصيل'),
+                      getnormaltexts('اضافة العنوان بالتفصيل'),
                       SizedBox(
                         height: mediaqueryheight(0.015, context),
                       ),
-                      getbadrhospitaltexts(':- ارقام التليفون'),
+                      getnormaltexts(':- ارقام التليفون'),
                       SizedBox(
                         height: mediaqueryheight(0.015, context),
                       ),
                       Flexible(
                         fit: FlexFit.loose,
-                        child: getbadrhospitaltexts(
+                        child: getnormaltexts(
                           '010000000000 -024679458 - 0254765475',
                         ),
                       ),
@@ -149,12 +148,9 @@ class _BadrhospitalState extends State<Badrhospital> {
                       SizedBox(
                         height: mediaqueryheight(0.015, context),
                       ),
-                      zahraButton(
+                      zahragotolocation(
                         context,
                         const HomescreenDrawerwidget(),
-                        SvgPicture.asset(
-                          'assets/starttext.svg',
-                        ),
                         () {},
                       ),
                       SizedBox(

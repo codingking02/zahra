@@ -103,12 +103,36 @@ class TrainStation extends StatelessWidget {
                         context,
                       ),
                     ),
-                    SizedBox(
-                      width: double.infinity,
-                      child: Image.asset(
-                        'assets/trainstationmap.png',
-                        fit: BoxFit.fill,
-                      ),
+                    Stack(
+                      children: [
+                        SizedBox(
+                          width: double.infinity,
+                          child: Image.asset(
+                            'assets/trainstationmap.png',
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        Positioned(
+                          bottom: 0,
+                          left: 0,
+                          right: 0,
+                          child: Container(
+                            width: double.infinity,
+                            height: mediaqueryheight(0.05, context),
+                            decoration: BoxDecoration(
+                              color: bgButtonColor,
+                              borderRadius: const BorderRadius.horizontal(
+                                left: Radius.circular(
+                                  10,
+                                ),
+                                right: Radius.circular(
+                                  10,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

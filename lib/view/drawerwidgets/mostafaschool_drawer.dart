@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/view/screens/home_screen.dart';
@@ -8,10 +7,6 @@ import 'package:zahra/view/screens/medical_services.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
 import 'package:zahra/view/screens/mostafa_school.dart';
-import 'package:zahra/view/screens/train_station.dart';
-import 'package:zahra/view/screens/transportation.dart';
-import 'package:zahra/custom/zahra_colors.dart';
-import 'package:zahra/view/screens/zahratech.dart';
 
 class MostafaschoolDrawer extends StatefulWidget {
   const MostafaschoolDrawer({super.key});

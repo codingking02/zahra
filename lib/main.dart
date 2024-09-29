@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:zahra/view/drawerwidgets/badrhospital_drawer.dart';
-import 'package:zahra/view/drawerwidgets/mostafaschool_drawer.dart';
+import 'package:zahra/view/drawerwidgets/agiadcompany_drawer.dart';
 import 'package:zahra/view/drawerwidgets/oldbadrcity_drawer.dart';
-import 'package:zahra/view/drawerwidgets/train_station_drawer.dart';
-import 'package:zahra/view/drawerwidgets/zahratech_drawer.dart';
-import 'package:zahra/view/screens/splash_screen.dart';
+import 'package:zahra/view/screens/agiadcompany.dart';
 
 void main() {
   runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Zahra',
-      home: MostafaschoolDrawer(),
+      home: AgiadcompanyDrawer(),
     ),
   );
 }

@@ -1,27 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:zahra/view/screens/agiadcompany.dart';
+import 'package:zahra/view/screens/badrhospital.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/hospitals.dart';
 import 'package:zahra/view/screens/medical_services.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
-import 'package:zahra/view/screens/oldbadrcity.dart';
 
-class OldbadrcityDrawer extends StatefulWidget {
-  const OldbadrcityDrawer({super.key});
+class AgiadcompanyDrawer extends StatefulWidget {
+  const AgiadcompanyDrawer({super.key});
   @override
-  State<OldbadrcityDrawer> createState() => _OldbadrcityDrawerState();
+  State<AgiadcompanyDrawer> createState() => _AgiadcompanyDrawerState();
 }
 
-class _OldbadrcityDrawerState extends State<OldbadrcityDrawer> {
+class _AgiadcompanyDrawerState extends State<AgiadcompanyDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const Oldbadrcity();
+    selectedWidget = const Agiadcompany();
     super.initState();
   }
 

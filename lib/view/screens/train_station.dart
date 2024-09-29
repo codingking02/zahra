@@ -118,15 +118,36 @@ class TrainStation extends StatelessWidget {
                           right: 0,
                           child: Container(
                             width: double.infinity,
-                            height: mediaqueryheight(0.05, context),
+                            height: mediaqueryheight(0.055, context),
                             decoration: BoxDecoration(
+                              boxShadow: const [
+                                BoxShadow(
+                                  offset: Offset(
+                                    0,
+                                    4,
+                                  ),
+                                  blurRadius: 15,
+                                  spreadRadius: 0,
+                                  color: Color.fromRGBO(0, 0, 0, 0.08),
+                                ),
+                              ],
                               color: bgButtonColor,
-                              borderRadius: const BorderRadius.horizontal(
-                                left: Radius.circular(
+                              borderRadius: const BorderRadius.only(
+                                bottomLeft: Radius.circular(
                                   10,
                                 ),
-                                right: Radius.circular(
+                                bottomRight: Radius.circular(
                                   10,
+                                ),
+                              ),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'اذهب للخريطه',
+                                style: GoogleFonts.cairo(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 14,
+                                  color: const Color.fromRGBO(249, 243, 228, 1),
                                 ),
                               ),
                             ),

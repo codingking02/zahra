@@ -7,9 +7,13 @@ import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/homeshooping.dart';
 import 'package:zahra/view/screens/hospitals.dart';
+import 'package:zahra/view/screens/learning_services.dart';
 import 'package:zahra/view/screens/medical_services.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
+import 'package:zahra/view/screens/public_service.dart';
+import 'package:zahra/view/screens/public_transportation.dart';
+import 'package:zahra/view/screens/restaurants.dart';
 import 'package:zahra/view/screens/splash_screen.dart';
 
 class HomeshoppingDrawer extends StatefulWidget {
@@ -159,7 +163,7 @@ class _HomeshoppingDrawerState extends State<HomeshoppingDrawer> {
                           ismedical(selectedWidget!)
                               ? SvgPicture.asset('assets/blackpills.svg')
                               : SvgPicture.asset('assets/redpills.svg'),
-                          const HomeScreen(),
+                          const MedicalServices(),
                         ),
                         SizedBox(
                           height: mediaqueryheight(0.01, context),
@@ -175,7 +179,7 @@ class _HomeshoppingDrawerState extends State<HomeshoppingDrawer> {
                           isrestaurant(selectedWidget!)
                               ? SvgPicture.asset('assets/blackfood.svg')
                               : SvgPicture.asset('assets/redfood.svg'),
-                          const MedicalServices(),
+                          const Restaurants(),
                         ),
                         SizedBox(
                           height: mediaqueryheight(0.01, context),
@@ -191,7 +195,7 @@ class _HomeshoppingDrawerState extends State<HomeshoppingDrawer> {
                           isshop(selectedWidget!)
                               ? SvgPicture.asset('assets/blackshop.svg')
                               : SvgPicture.asset('assets/redshop.svg'),
-                          const MedicalServices(),
+                          const Homeshooping(),
                         ),
                         SizedBox(
                           height: mediaqueryheight(0.01, context),
@@ -207,7 +211,7 @@ class _HomeshoppingDrawerState extends State<HomeshoppingDrawer> {
                           iseducations(selectedWidget!)
                               ? SvgPicture.asset('assets/blacklearn.svg')
                               : SvgPicture.asset('assets/redlearn.svg'),
-                          const MedicalServices(),
+                          const LearningServices(),
                         ),
                         SizedBox(
                           height: mediaqueryheight(0.01, context),
@@ -242,7 +246,7 @@ class _HomeshoppingDrawerState extends State<HomeshoppingDrawer> {
                           istransports(selectedWidget!)
                               ? SvgPicture.asset('assets/blackcycle.svg')
                               : SvgPicture.asset('assets/redcycle.svg'),
-                          const MedicalServices(),
+                          const PublicTransportation(),
                         ),
                         SizedBox(
                           height: mediaqueryheight(0.01, context),
@@ -258,7 +262,7 @@ class _HomeshoppingDrawerState extends State<HomeshoppingDrawer> {
                           isotherservice(selectedWidget!)
                               ? SvgPicture.asset('assets/blacksettings.svg')
                               : SvgPicture.asset('assets/redsettings.svg'),
-                          const MedicalServices(),
+                          const PublicService(),
                         ),
                         SizedBox(
                           height: mediaqueryheight(0.02, context),

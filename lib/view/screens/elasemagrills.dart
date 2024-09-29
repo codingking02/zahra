@@ -3,15 +3,16 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
 import 'package:zahra/custom/zahra_container.dart';
+import 'package:zahra/custom/zahra_texts.dart';
 
-class Agiadcompany extends StatefulWidget {
-  const Agiadcompany({super.key});
+class Elasemagrills extends StatefulWidget {
+  const Elasemagrills({super.key});
 
   @override
-  State<Agiadcompany> createState() => _AgiadcompanyState();
+  State<Elasemagrills> createState() => _ElasemagrillsState();
 }
 
-class _AgiadcompanyState extends State<Agiadcompany> {
+class _ElasemagrillsState extends State<Elasemagrills> {
   // Create a GlobalKey for the Scaffold
 
   @override
@@ -31,7 +32,7 @@ class _AgiadcompanyState extends State<Agiadcompany> {
               ),
               Center(
                 child: Text(
-                  'شركة اجياد',
+                  'مشويات العاصمة',
                   style: GoogleFonts.cairo(
                     fontSize: 28,
                     fontWeight: FontWeight.w700,
@@ -42,13 +43,41 @@ class _AgiadcompanyState extends State<Agiadcompany> {
               Expanded(
                 child: SingleChildScrollView(
                   child: Column(
+                    mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       SizedBox(
                         height: mediaqueryheight(0.03, context),
                       ),
+                      Card(
+                        elevation: 5,
+                        child: Container(
+                          height: mediaqueryheight(0.2, context),
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: const Color.fromRGBO(249, 243, 228, 1),
+                            border: Border.all(
+                              color: const Color.fromRGBO(222, 208, 182, 1),
+                            ),
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(8),
+                            ),
+                            boxShadow: const [
+                              BoxShadow(
+                                offset: Offset(0, 4),
+                                blurRadius: 10,
+                                spreadRadius: 0,
+                                color: Color.fromRGBO(0, 0, 0, 0.08),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: mediaqueryheight(0.02, context),
+                      ),
                       Text(
-                        'عناوين واماكن التجمع',
+                        'المنيو',
                         style: GoogleFonts.cairo(
                           fontSize: 20,
                           fontWeight: FontWeight.w700,
@@ -63,29 +92,29 @@ class _AgiadcompanyState extends State<Agiadcompany> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             getmenutext(
-                              'مكان التجمع  ----------------------- 7:00 صباحا',
+                              'كفتة كندوز -------------------------  160 جنيه ',
                             ),
                             getmenutext(
-                              'مكان التجمع  ----------------------- 8:00 صباحا',
+                              'طرب ضاني -------------------------    220 جنيه',
                             ),
                             getmenutext(
-                              'مكان التجمع  ----------------------- 8:00 صباحا',
+                              'طرب كندوز   -------------------------  180 جنيه',
                             ),
                             getmenutext(
-                              'مكان التجمع  ----------------------- 8:00 صباحا',
+                              'ستيك  ------------------------------- 220 جنيه',
                             ),
                             getmenutext(
-                              'مكان التجمع  ----------------------- 9:00 صباحا',
+                              'كبدو ضاني  -------------------------  220 جنيه ',
                             ),
                           ],
                         ),
                         mediaqueryheight(0.2, context),
                       ),
                       SizedBox(
-                        height: mediaqueryheight(0.02, context),
+                        height: mediaqueryheight(0.04, context),
                       ),
                       Text(
-                        '-: ارقام التليفون',
+                        ': العنوان',
                         style: GoogleFonts.cairo(
                           fontSize: 20,
                           fontWeight: FontWeight.w700,
@@ -93,27 +122,23 @@ class _AgiadcompanyState extends State<Agiadcompany> {
                         ),
                       ),
                       SizedBox(
-                        height: mediaqueryheight(0.02, context),
+                        height: mediaqueryheight(0.015, context),
                       ),
-                      getcard(
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            getmenutext(
-                              'أ /احمد جمال                                     010000000000',
-                            ),
-                            getmenutext(
-                              'أ /سمير سمير                                     010000000000',
-                            ),
-                            getmenutext(
-                              'أ /احمد احمد                                    3534765383-02',
-                            ),
-                            getmenutext(
-                              'أ / محمد احمد                                 3534765383-02',
-                            ),
-                          ],
-                        ),
-                        mediaqueryheight(0.15, context),
+                      getnormaltexts(
+                        'اضافة العنوان بالتفصيل',
+                      ),
+                      SizedBox(
+                        height: mediaqueryheight(0.015, context),
+                      ),
+                      getnormaltexts(':- ارقام التليفون'),
+                      SizedBox(
+                        height: mediaqueryheight(0.015, context),
+                      ),
+                      getnormaltexts(
+                        '010000000000 -024679458 - 0254765475',
+                      ),
+                      SizedBox(
+                        height: mediaqueryheight(0.015, context),
                       ),
                     ],
                   ),
@@ -137,11 +162,16 @@ Widget getmenutext(String text) {
     ),
   );
 }
+
 //  أ /احمد جمال                                     010000000000
 //  أ /سمير سمير                                    010000000000
 //  أ /احمد احمد                                    3534765383-02
 //  أ / محمد احمد                                  3534765383-02
-
+// كفتة كندوز -------------------------  160 جنيه
+// طرب ضاني -------------------------    220 جنيه
+// طرب كندوز   -------------------------  180 جنيه
+// ستيك  ------------------------------- 220 جنيه
+// كبدو ضاني  -------------------------  220 جنيه
 Widget getcard(
   Widget mywidget,
   double height,

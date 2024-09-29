@@ -1,27 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:zahra/view/screens/agiadcompany.dart';
+import 'package:zahra/view/screens/badrhospital.dart';
+import 'package:zahra/view/screens/elasemagrills.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/hospitals.dart';
+import 'package:zahra/view/screens/hypermarket.dart';
 import 'package:zahra/view/screens/medical_services.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
-import 'package:zahra/view/screens/mostafa_school.dart';
 
-class MostafaschoolDrawer extends StatefulWidget {
-  const MostafaschoolDrawer({super.key});
+class HypermarketDrawer extends StatefulWidget {
+  const HypermarketDrawer({super.key});
   @override
-  State<MostafaschoolDrawer> createState() => _ZahratechDrawerState();
+  State<HypermarketDrawer> createState() => _HypermarketDrawerState();
 }
 
-class _ZahratechDrawerState extends State<MostafaschoolDrawer> {
+class _HypermarketDrawerState extends State<HypermarketDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const MostafaSchool();
+    selectedWidget = const Hypermarket();
     super.initState();
   }
 

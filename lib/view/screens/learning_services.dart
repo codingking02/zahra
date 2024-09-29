@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
+import 'package:zahra/view/screens/school.dart';
 
 class LearningServices extends StatelessWidget {
   const LearningServices({super.key});
@@ -39,9 +40,19 @@ class LearningServices extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    getcontainer(
-                      context,
-                      'مدارس',
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const School(),
+                          ),
+                        );
+                      },
+                      child: getcontainer(
+                        context,
+                        'مدارس',
+                      ),
                     ),
                     SizedBox(
                       height: mediaqueryheight(

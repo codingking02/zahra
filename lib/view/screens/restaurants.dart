@@ -242,7 +242,7 @@ class _RestaurantsState extends State<Restaurants> {
                                           context,
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                                GrillsDrawer(),
+                                                const GrillsDrawer(),
                                           ),
                                         );
                                       },

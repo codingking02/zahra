@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
+import 'package:zahra/view/screens/agiadcompany.dart';
 
 class PublicTransportation extends StatelessWidget {
   const PublicTransportation({super.key});
@@ -40,9 +41,19 @@ class PublicTransportation extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    getcontainer(
-                      context,
-                      'شركة اجياد',
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Agiadcompany(),
+                          ),
+                        );
+                      },
+                      child: getcontainer(
+                        context,
+                        'شركة اجياد',
+                      ),
                     ),
                     SizedBox(
                       height: mediaqueryheight(

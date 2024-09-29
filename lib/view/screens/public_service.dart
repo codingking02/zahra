@@ -4,6 +4,7 @@ import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
+import 'package:zahra/view/drawerwidgets/oldbadrcity_drawer.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 
 class PublicService extends StatelessWidget {
@@ -50,7 +51,7 @@ class PublicService extends StatelessWidget {
                     ),
                     hospitalButton(
                       'جهاز مدينه بدر القديم',
-                      const HomescreenDrawerwidget(),
+                      const OldbadrcityDrawer(),
                       context,
                     ),
                     SizedBox(

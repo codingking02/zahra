@@ -4,7 +4,9 @@ import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
+import 'package:zahra/view/drawerwidgets/moustafakamel_drawer.dart';
 import 'package:zahra/view/screens/home_screen.dart';
+import 'package:zahra/view/screens/moustafakamel.dart';
 
 class School extends StatelessWidget {
   const School({super.key});
@@ -40,7 +42,7 @@ class School extends StatelessWidget {
             ),
             hospitalButton(
               'مدرسة مصطفي كامل',
-              const HomescreenDrawerwidget(),
+              const MoustafakamelDrawer(),
               context,
             ),
             SizedBox(

@@ -5,6 +5,7 @@ import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
 import 'package:zahra/view/screens/home_screen.dart';
+import 'package:zahra/view/screens/zahratech.dart';
 
 class Cameras extends StatelessWidget {
   const Cameras({super.key});
@@ -40,7 +41,7 @@ class Cameras extends StatelessWidget {
             ),
             hospitalButton(
               'زهرة تكنولوجي',
-              const HomescreenDrawerwidget(),
+              const Zahratech(),
               context,
             ),
             SizedBox(

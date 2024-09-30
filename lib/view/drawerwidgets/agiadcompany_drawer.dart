@@ -44,7 +44,12 @@ class _AgiadcompanyDrawerState extends State<AgiadcompanyDrawer> {
     Widget gotoWidget,
   ) {
     return TextButton.icon(
-      label: Text(text),
+      label: Text(
+        text,
+        textDirection: TextDirection.rtl,
+        softWrap: true,
+        textAlign: TextAlign.right,
+      ),
       icon: icon,
       iconAlignment: IconAlignment.end,
       style: TextButton.styleFrom(

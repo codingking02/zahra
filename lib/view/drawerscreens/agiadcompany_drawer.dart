@@ -29,10 +29,31 @@ class _AgiadcompanyDrawerState extends State<AgiadcompanyDrawer> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   Widget? selectedWidget;
+
   @override
   void initState() {
     selectedWidget = const Agiadcompany();
     super.initState();
+  }
+
+  int currentIndex = 1;
+  void onTabTapped(int index) {
+    setState(() {
+      currentIndex = index; // Update the current index
+      switch (index) {
+        case 0:
+          Navigator.pop(context); // Navigate back
+          break;
+        case 1:
+          selectedWidget =
+              const HomescreenDrawerwidget(); // Set the main screen
+          break;
+        case 2:
+          selectedWidget =
+              const HomescreenDrawerwidget(); // Set the favorite screen
+          break;
+      }
+    });
   }
 
   // Keeps track of the current screen
@@ -74,7 +95,7 @@ class _AgiadcompanyDrawerState extends State<AgiadcompanyDrawer> {
       top: false,
       child: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
-          currentIndex: 1,
+          currentIndex: currentIndex,
           elevation: 10,
           selectedItemColor: const Color(0xffDED0B6),
           selectedLabelStyle: GoogleFonts.cairo(
@@ -87,28 +108,19 @@ class _AgiadcompanyDrawerState extends State<AgiadcompanyDrawer> {
             fontWeight: FontWeight.w600,
           ),
           backgroundColor: const Color(0xff607274),
+          onTap: onTabTapped, // Handle tap event
           items: [
             BottomNavigationBarItem(
-              icon: InkWell(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: SvgPicture.asset(
-                  'assets/arrowupleft.svg',
-                ),
-              ),
+              icon: SvgPicture.asset('assets/arrowupleft.svg'),
               label: 'عودة',
             ),
             BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  'assets/home.svg',
-                ),
-                label: 'الرئيسية',
-                backgroundColor: const Color(0xffDED0B6)),
+              icon: SvgPicture.asset('assets/home.svg'),
+              label: 'الرئيسية',
+              backgroundColor: const Color(0xffDED0B6),
+            ),
             BottomNavigationBarItem(
-              icon: SvgPicture.asset(
-                'assets/heart.svg',
-              ),
+              icon: SvgPicture.asset('assets/heart.svg'),
               label: 'المفضله',
             ),
           ],

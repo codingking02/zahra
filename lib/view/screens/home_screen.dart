@@ -5,6 +5,8 @@ import 'package:zahra/view/drawerscreens/medicalservices_drawerwidget.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/custom/zahra_fields.dart';
+import 'package:zahra/view/drawerscreens/restaurants_drawer.dart';
+import 'package:zahra/view/screens/restaurants.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -101,9 +103,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(
                         width: double.infinity,
                         height: mediaqueryheight(0.25, context),
-                        child: Image.asset(
-                          'assets/cafe.png',
-                          fit: BoxFit.fill,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const RestaurantsDrawer(),
+                              ),
+                            );
+                          },
+                          child: Image.asset(
+                            'assets/cafe.png',
+                            fit: BoxFit.fill,
+                          ),
                         ),
                       ),
                       SizedBox(

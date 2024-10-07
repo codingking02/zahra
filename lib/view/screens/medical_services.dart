@@ -172,9 +172,10 @@ class _MedicalServicesState extends State<MedicalServices> {
                                   ),
                                   dotHeight: 20,
                                   dotWidth: 20,
-                                  dotColor: Color.fromRGBO(217, 217, 217, 1),
+                                  dotColor:
+                                      const Color.fromRGBO(217, 217, 217, 1),
                                   activeDotColor:
-                                      Color.fromRGBO(217, 217, 217, 1),
+                                      const Color.fromRGBO(217, 217, 217, 1),
                                 ),
                                 onDotClicked: (index) {
                                   controller.animateToPage(
@@ -242,7 +243,7 @@ class _MedicalServicesState extends State<MedicalServices> {
                                           context,
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                                HospitalDrawerwidget(),
+                                                const HospitalDrawerwidget(),
                                           ),
                                         );
                                       },

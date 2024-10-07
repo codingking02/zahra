@@ -49,28 +49,11 @@ class _HypermarketState extends State<Hypermarket> {
                       SizedBox(
                         height: mediaqueryheight(0.03, context),
                       ),
-                      Card(
-                        elevation: 5,
-                        child: Container(
-                          height: mediaqueryheight(0.2, context),
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: const Color.fromRGBO(249, 243, 228, 1),
-                            border: Border.all(
-                              color: const Color.fromRGBO(222, 208, 182, 1),
-                            ),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(8),
-                            ),
-                            boxShadow: const [
-                              BoxShadow(
-                                offset: Offset(0, 4),
-                                blurRadius: 10,
-                                spreadRadius: 0,
-                                color: Color.fromRGBO(0, 0, 0, 0.08),
-                              )
-                            ],
-                          ),
+                      SizedBox(
+                        width: double.infinity,
+                        child: Image.asset(
+                          'assets/hyperzadmarket.png',
+                          fit: BoxFit.fill,
                         ),
                       ),
                       SizedBox(

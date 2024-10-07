@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
@@ -13,8 +14,6 @@ class Elasemagrills extends StatefulWidget {
 }
 
 class _ElasemagrillsState extends State<Elasemagrills> {
-  // Create a GlobalKey for the Scaffold
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -49,27 +48,14 @@ class _ElasemagrillsState extends State<Elasemagrills> {
                       SizedBox(
                         height: mediaqueryheight(0.03, context),
                       ),
-                      Card(
-                        elevation: 5,
-                        child: Container(
-                          height: mediaqueryheight(0.2, context),
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: const Color.fromRGBO(249, 243, 228, 1),
-                            border: Border.all(
-                              color: const Color.fromRGBO(222, 208, 182, 1),
-                            ),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(8),
-                            ),
-                            boxShadow: const [
-                              BoxShadow(
-                                offset: Offset(0, 4),
-                                blurRadius: 10,
-                                spreadRadius: 0,
-                                color: Color.fromRGBO(0, 0, 0, 0.08),
-                              )
-                            ],
+                      SizedBox(
+                        width: double.infinity,
+                        // Fixed height for the image container
+                        child: InteractiveViewer(
+                          minScale: 1,
+                          maxScale: 4, // Allows zooming up to 4x
+                          child: SvgPicture.asset(
+                            'assets/elasemagrillsmenu.svg',
                           ),
                         ),
                       ),
@@ -163,15 +149,6 @@ Widget getmenutext(String text) {
   );
 }
 
-//  أ /احمد جمال                                     010000000000
-//  أ /سمير سمير                                    010000000000
-//  أ /احمد احمد                                    3534765383-02
-//  أ / محمد احمد                                  3534765383-02
-// كفتة كندوز -------------------------  160 جنيه
-// طرب ضاني -------------------------    220 جنيه
-// طرب كندوز   -------------------------  180 جنيه
-// ستيك  ------------------------------- 220 جنيه
-// كبدو ضاني  -------------------------  220 جنيه
 Widget getcard(
   Widget mywidget,
   double height,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/drawerwidgets/school_drawer.dart';
+import 'package:zahra/view/drawerscreens/school_drawer.dart';
 import 'package:zahra/view/screens/school.dart';
 
 class LearningServices extends StatelessWidget {

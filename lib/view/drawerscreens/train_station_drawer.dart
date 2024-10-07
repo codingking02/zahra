@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_function.dart';
-import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
+import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/homeshooping.dart';
 import 'package:zahra/view/screens/hospitals.dart';
@@ -14,22 +14,22 @@ import 'package:zahra/view/screens/public_service.dart';
 import 'package:zahra/view/screens/public_transportation.dart';
 import 'package:zahra/view/screens/restaurants.dart';
 import 'package:zahra/view/screens/splash_screen.dart';
+import 'package:zahra/view/screens/train_station.dart';
 
-class PublictranportationDrawer extends StatefulWidget {
-  const PublictranportationDrawer({super.key});
+class TrainStationDrawer extends StatefulWidget {
+  const TrainStationDrawer({super.key});
   @override
-  State<PublictranportationDrawer> createState() =>
-      _PublictranportationDrawerState();
+  State<TrainStationDrawer> createState() => _TrainStationDrawerState();
 }
 
-class _PublictranportationDrawerState extends State<PublictranportationDrawer> {
+class _TrainStationDrawerState extends State<TrainStationDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const PublicTransportation();
+    selectedWidget = const TrainStation();
     super.initState();
   }
 

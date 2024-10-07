@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_function.dart';
-import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
+import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/homeshooping.dart';
 import 'package:zahra/view/screens/hospitals.dart';
@@ -16,20 +16,20 @@ import 'package:zahra/view/screens/public_transportation.dart';
 import 'package:zahra/view/screens/restaurants.dart';
 import 'package:zahra/view/screens/splash_screen.dart';
 
-class HomeshoppingDrawer extends StatefulWidget {
-  const HomeshoppingDrawer({super.key});
+class PublicserviceDrawer extends StatefulWidget {
+  const PublicserviceDrawer({super.key});
   @override
-  State<HomeshoppingDrawer> createState() => _HomeshoppingDrawerState();
+  State<PublicserviceDrawer> createState() => _PublicserviceDrawerState();
 }
 
-class _HomeshoppingDrawerState extends State<HomeshoppingDrawer> {
+class _PublicserviceDrawerState extends State<PublicserviceDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const Homeshooping();
+    selectedWidget = const PublicService();
     super.initState();
   }
 

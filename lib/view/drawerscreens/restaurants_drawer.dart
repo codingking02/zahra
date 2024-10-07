@@ -3,8 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_function.dart';
-import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
-import 'package:zahra/view/screens/badrhospital.dart';
+import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/homeshooping.dart';
 import 'package:zahra/view/screens/hospitals.dart';
@@ -17,20 +16,20 @@ import 'package:zahra/view/screens/public_transportation.dart';
 import 'package:zahra/view/screens/restaurants.dart';
 import 'package:zahra/view/screens/splash_screen.dart';
 
-class BadrhospitalDrawer extends StatefulWidget {
-  const BadrhospitalDrawer({super.key});
+class RestaurantsDrawer extends StatefulWidget {
+  const RestaurantsDrawer({super.key});
   @override
-  State<BadrhospitalDrawer> createState() => _BadrhospitalDrawerState();
+  State<RestaurantsDrawer> createState() => _RestaurantsDrawerState();
 }
 
-class _BadrhospitalDrawerState extends State<BadrhospitalDrawer> {
+class _RestaurantsDrawerState extends State<RestaurantsDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const Badrhospital();
+    selectedWidget = const Restaurants();
     super.initState();
   }
 

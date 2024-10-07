@@ -3,8 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_function.dart';
-import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
-import 'package:zahra/view/screens/grills.dart';
+import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/homeshooping.dart';
 import 'package:zahra/view/screens/hospitals.dart';
@@ -15,23 +14,24 @@ import 'package:zahra/custom/zahra_colors.dart';
 import 'package:zahra/view/screens/public_service.dart';
 import 'package:zahra/view/screens/public_transportation.dart';
 import 'package:zahra/view/screens/restaurants.dart';
+import 'package:zahra/view/screens/splash_screen.dart';
+import 'package:zahra/view/screens/transportation.dart';
 
-import '../screens/splash_screen.dart';
-
-class GrillsDrawer extends StatefulWidget {
-  const GrillsDrawer({super.key});
+class MedicalservicesDrawerwidget extends StatefulWidget {
+  const MedicalservicesDrawerwidget({super.key});
   @override
-  State<GrillsDrawer> createState() => _GrillsDrawerState();
+  State<MedicalservicesDrawerwidget> createState() =>
+      _MedicalservicesDrawerwidgetState();
 }
 
-class _GrillsDrawerState extends State<GrillsDrawer> {
+class _MedicalservicesDrawerwidgetState
+    extends State<MedicalservicesDrawerwidget> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const Grills();
+    selectedWidget = const MedicalServices();
     super.initState();
   }
 
@@ -44,12 +44,7 @@ class _GrillsDrawerState extends State<GrillsDrawer> {
     Widget gotoWidget,
   ) {
     return TextButton.icon(
-      label: Text(
-        text,
-        textDirection: TextDirection.rtl,
-        softWrap: true,
-        textAlign: TextAlign.right,
-      ),
+      label: Text(text),
       icon: icon,
       iconAlignment: IconAlignment.end,
       style: TextButton.styleFrom(

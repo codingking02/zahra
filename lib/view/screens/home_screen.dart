@@ -1,7 +1,7 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:flutter/material.dart';
-import 'package:zahra/view/drawerwidgets/medicalservices_drawerwidget.dart';
+import 'package:zahra/view/drawerscreens/medicalservices_drawerwidget.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/custom/zahra_fields.dart';

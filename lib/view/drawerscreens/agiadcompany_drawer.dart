@@ -3,7 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_function.dart';
-import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
+import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
+import 'package:zahra/view/screens/agiadcompany.dart';
+import 'package:zahra/view/screens/badrhospital.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/homeshooping.dart';
 import 'package:zahra/view/screens/hospitals.dart';
@@ -16,19 +18,20 @@ import 'package:zahra/view/screens/public_transportation.dart';
 import 'package:zahra/view/screens/restaurants.dart';
 import 'package:zahra/view/screens/splash_screen.dart';
 
-class LearningserviceDrawer extends StatefulWidget {
-  const LearningserviceDrawer({super.key});
+class AgiadcompanyDrawer extends StatefulWidget {
+  const AgiadcompanyDrawer({super.key});
   @override
-  State<LearningserviceDrawer> createState() => _LearningserviceDrawerState();
+  State<AgiadcompanyDrawer> createState() => _AgiadcompanyDrawerState();
 }
 
-class _LearningserviceDrawerState extends State<LearningserviceDrawer> {
+class _AgiadcompanyDrawerState extends State<AgiadcompanyDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const LearningServices();
+    selectedWidget = const Agiadcompany();
     super.initState();
   }
 
@@ -41,7 +44,12 @@ class _LearningserviceDrawerState extends State<LearningserviceDrawer> {
     Widget gotoWidget,
   ) {
     return TextButton.icon(
-      label: Text(text),
+      label: Text(
+        text,
+        textDirection: TextDirection.rtl,
+        softWrap: true,
+        textAlign: TextAlign.right,
+      ),
       icon: icon,
       iconAlignment: IconAlignment.end,
       style: TextButton.styleFrom(
@@ -85,13 +93,8 @@ class _LearningserviceDrawerState extends State<LearningserviceDrawer> {
                 onTap: () {
                   Navigator.pop(context);
                 },
-                child: InkWell(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: SvgPicture.asset(
-                    'assets/arrowupleft.svg',
-                  ),
+                child: SvgPicture.asset(
+                  'assets/arrowupleft.svg',
                 ),
               ),
               label: 'عودة',

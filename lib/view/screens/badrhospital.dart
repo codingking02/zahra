@@ -5,7 +5,7 @@ import 'package:zahra/custom/zahra_colors.dart';
 import 'package:zahra/custom/zahra_texts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
+import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
 
 class Badrhospital extends StatefulWidget {
   const Badrhospital({super.key});

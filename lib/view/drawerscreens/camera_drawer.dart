@@ -3,7 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_function.dart';
-import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
+import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
+import 'package:zahra/view/screens/camras.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/homeshooping.dart';
 import 'package:zahra/view/screens/hospitals.dart';
@@ -16,20 +17,20 @@ import 'package:zahra/view/screens/public_transportation.dart';
 import 'package:zahra/view/screens/restaurants.dart';
 import 'package:zahra/view/screens/splash_screen.dart';
 
-class PublicserviceDrawer extends StatefulWidget {
-  const PublicserviceDrawer({super.key});
+class CameraDrawer extends StatefulWidget {
+  const CameraDrawer({super.key});
   @override
-  State<PublicserviceDrawer> createState() => _PublicserviceDrawerState();
+  State<CameraDrawer> createState() => _CameraDrawerState();
 }
 
-class _PublicserviceDrawerState extends State<PublicserviceDrawer> {
+class _CameraDrawerState extends State<CameraDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const PublicService();
+    selectedWidget = const Cameras();
     super.initState();
   }
 
@@ -42,7 +43,12 @@ class _PublicserviceDrawerState extends State<PublicserviceDrawer> {
     Widget gotoWidget,
   ) {
     return TextButton.icon(
-      label: Text(text),
+      label: Text(
+        text,
+        textDirection: TextDirection.rtl,
+        softWrap: true,
+        textAlign: TextAlign.right,
+      ),
       icon: icon,
       iconAlignment: IconAlignment.end,
       style: TextButton.styleFrom(

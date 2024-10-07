@@ -3,7 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_function.dart';
-import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
+import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
+import 'package:zahra/view/screens/badrhospital.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/homeshooping.dart';
 import 'package:zahra/view/screens/hospitals.dart';
@@ -14,23 +15,22 @@ import 'package:zahra/custom/zahra_colors.dart';
 import 'package:zahra/view/screens/public_service.dart';
 import 'package:zahra/view/screens/public_transportation.dart';
 import 'package:zahra/view/screens/restaurants.dart';
-import 'package:zahra/view/screens/school.dart';
 import 'package:zahra/view/screens/splash_screen.dart';
 
-class SchoolDrawer extends StatefulWidget {
-  const SchoolDrawer({super.key});
+class BadrhospitalDrawer extends StatefulWidget {
+  const BadrhospitalDrawer({super.key});
   @override
-  State<SchoolDrawer> createState() => _SchoolDrawerState();
+  State<BadrhospitalDrawer> createState() => _BadrhospitalDrawerState();
 }
 
-class _SchoolDrawerState extends State<SchoolDrawer> {
+class _BadrhospitalDrawerState extends State<BadrhospitalDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const School();
+    selectedWidget = const Badrhospital();
     super.initState();
   }
 
@@ -43,7 +43,12 @@ class _SchoolDrawerState extends State<SchoolDrawer> {
     Widget gotoWidget,
   ) {
     return TextButton.icon(
-      label: Text(text),
+      label: Text(
+        text,
+        textDirection: TextDirection.rtl,
+        softWrap: true,
+        textAlign: TextAlign.right,
+      ),
       icon: icon,
       iconAlignment: IconAlignment.end,
       style: TextButton.styleFrom(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:zahra/custom/zahra_function.dart';
-import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
+import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/homeshooping.dart';
 import 'package:zahra/view/screens/hospitals.dart';
@@ -10,26 +10,25 @@ import 'package:zahra/view/screens/learning_services.dart';
 import 'package:zahra/view/screens/medical_services.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
+import 'package:zahra/custom/zahra_function.dart';
 import 'package:zahra/view/screens/public_service.dart';
 import 'package:zahra/view/screens/public_transportation.dart';
 import 'package:zahra/view/screens/restaurants.dart';
 import 'package:zahra/view/screens/splash_screen.dart';
-import 'package:zahra/view/screens/train_station.dart';
 
-class TrainStationDrawer extends StatefulWidget {
-  const TrainStationDrawer({super.key});
+class HospitalDrawerwidget extends StatefulWidget {
+  const HospitalDrawerwidget({super.key});
   @override
-  State<TrainStationDrawer> createState() => _TrainStationDrawerState();
+  State<HospitalDrawerwidget> createState() => _HospitalDrawerwidgetState();
 }
 
-class _TrainStationDrawerState extends State<TrainStationDrawer> {
+class _HospitalDrawerwidgetState extends State<HospitalDrawerwidget> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const TrainStation();
+    selectedWidget = const Hospitals();
     super.initState();
   }
 
@@ -86,8 +85,13 @@ class _TrainStationDrawerState extends State<TrainStationDrawer> {
                 onTap: () {
                   Navigator.pop(context);
                 },
-                child: SvgPicture.asset(
-                  'assets/arrowupleft.svg',
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: SvgPicture.asset(
+                    'assets/arrowupleft.svg',
+                  ),
                 ),
               ),
               label: 'عودة',

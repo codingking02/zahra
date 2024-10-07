@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zahra/view/drawerwidgets/restaurants_drawer.dart';
+import 'package:zahra/view/drawerscreens/restaurants_drawer.dart';
 import 'package:zahra/view/screens/splash_screen.dart';
 
 void main() {

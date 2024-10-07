@@ -3,7 +3,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_function.dart';
-import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
+import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
+import 'package:zahra/view/screens/agiadcompany.dart';
+import 'package:zahra/view/screens/badrhospital.dart';
+import 'package:zahra/view/screens/elasemagrills.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/homeshooping.dart';
 import 'package:zahra/view/screens/hospitals.dart';
@@ -16,20 +19,20 @@ import 'package:zahra/view/screens/public_transportation.dart';
 import 'package:zahra/view/screens/restaurants.dart';
 import 'package:zahra/view/screens/splash_screen.dart';
 
-class RestaurantsDrawer extends StatefulWidget {
-  const RestaurantsDrawer({super.key});
+class ElasemagrillsDrawer extends StatefulWidget {
+  const ElasemagrillsDrawer({super.key});
   @override
-  State<RestaurantsDrawer> createState() => _RestaurantsDrawerState();
+  State<ElasemagrillsDrawer> createState() => _ElasemagrillsDrawerState();
 }
 
-class _RestaurantsDrawerState extends State<RestaurantsDrawer> {
+class _ElasemagrillsDrawerState extends State<ElasemagrillsDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const Restaurants();
+    selectedWidget = const Elasemagrills();
     super.initState();
   }
 

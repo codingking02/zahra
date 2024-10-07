@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_function.dart';
-import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
+import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/homeshooping.dart';
 import 'package:zahra/view/screens/hospitals.dart';
@@ -14,24 +14,23 @@ import 'package:zahra/custom/zahra_colors.dart';
 import 'package:zahra/view/screens/public_service.dart';
 import 'package:zahra/view/screens/public_transportation.dart';
 import 'package:zahra/view/screens/restaurants.dart';
+import 'package:zahra/view/screens/school.dart';
 import 'package:zahra/view/screens/splash_screen.dart';
-import 'package:zahra/view/screens/transportation.dart';
 
-class MedicalservicesDrawerwidget extends StatefulWidget {
-  const MedicalservicesDrawerwidget({super.key});
+class SchoolDrawer extends StatefulWidget {
+  const SchoolDrawer({super.key});
   @override
-  State<MedicalservicesDrawerwidget> createState() =>
-      _MedicalservicesDrawerwidgetState();
+  State<SchoolDrawer> createState() => _SchoolDrawerState();
 }
 
-class _MedicalservicesDrawerwidgetState
-    extends State<MedicalservicesDrawerwidget> {
+class _SchoolDrawerState extends State<SchoolDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const MedicalServices();
+    selectedWidget = const School();
     super.initState();
   }
 

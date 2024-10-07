@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/drawerwidgets/agiadcompany_drawer.dart';
+import 'package:zahra/view/drawerscreens/agiadcompany_drawer.dart';
 import 'package:zahra/view/screens/agiadcompany.dart';
 
 class PublicTransportation extends StatelessWidget {

@@ -3,9 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_function.dart';
-import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
-import 'package:zahra/view/screens/agiadcompany.dart';
-import 'package:zahra/view/screens/badrhospital.dart';
+import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/homeshooping.dart';
 import 'package:zahra/view/screens/hospitals.dart';
@@ -17,21 +15,22 @@ import 'package:zahra/view/screens/public_service.dart';
 import 'package:zahra/view/screens/public_transportation.dart';
 import 'package:zahra/view/screens/restaurants.dart';
 import 'package:zahra/view/screens/splash_screen.dart';
+import 'package:zahra/view/screens/transportation.dart';
 
-class AgiadcompanyDrawer extends StatefulWidget {
-  const AgiadcompanyDrawer({super.key});
+class TransportationDrawer extends StatefulWidget {
+  const TransportationDrawer({super.key});
   @override
-  State<AgiadcompanyDrawer> createState() => _AgiadcompanyDrawerState();
+  State<TransportationDrawer> createState() => _TransportationDrawerState();
 }
 
-class _AgiadcompanyDrawerState extends State<AgiadcompanyDrawer> {
+class _TransportationDrawerState extends State<TransportationDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const Agiadcompany();
+    selectedWidget = const Transportation();
     super.initState();
   }
 
@@ -44,12 +43,7 @@ class _AgiadcompanyDrawerState extends State<AgiadcompanyDrawer> {
     Widget gotoWidget,
   ) {
     return TextButton.icon(
-      label: Text(
-        text,
-        textDirection: TextDirection.rtl,
-        softWrap: true,
-        textAlign: TextAlign.right,
-      ),
+      label: Text(text),
       icon: icon,
       iconAlignment: IconAlignment.end,
       style: TextButton.styleFrom(

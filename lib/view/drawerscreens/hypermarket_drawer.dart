@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_function.dart';
-import 'package:zahra/view/drawerwidgets/homescreen_drawerwidget.dart';
+import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
+import 'package:zahra/view/screens/agiadcompany.dart';
+import 'package:zahra/view/screens/badrhospital.dart';
+import 'package:zahra/view/screens/elasemagrills.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/homeshooping.dart';
 import 'package:zahra/view/screens/hospitals.dart';
+import 'package:zahra/view/screens/hypermarket.dart';
 import 'package:zahra/view/screens/learning_services.dart';
 import 'package:zahra/view/screens/medical_services.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
@@ -14,22 +19,21 @@ import 'package:zahra/view/screens/public_service.dart';
 import 'package:zahra/view/screens/public_transportation.dart';
 import 'package:zahra/view/screens/restaurants.dart';
 import 'package:zahra/view/screens/splash_screen.dart';
-import 'package:zahra/view/screens/zahratech.dart';
 
-class ZahratechDrawer extends StatefulWidget {
-  const ZahratechDrawer({super.key});
+class HypermarketDrawer extends StatefulWidget {
+  const HypermarketDrawer({super.key});
   @override
-  State<ZahratechDrawer> createState() => _ZahratechDrawerState();
+  State<HypermarketDrawer> createState() => _HypermarketDrawerState();
 }
 
-class _ZahratechDrawerState extends State<ZahratechDrawer> {
+class _HypermarketDrawerState extends State<HypermarketDrawer> {
   // GlobalKey to control the Scaffold and open the drawer
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   Widget? selectedWidget;
   @override
   void initState() {
-    selectedWidget = const Zahratech();
+    selectedWidget = const Hypermarket();
     super.initState();
   }
 

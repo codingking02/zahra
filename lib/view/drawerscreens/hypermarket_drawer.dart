@@ -46,8 +46,7 @@ class _HypermarketDrawerState extends State<HypermarketDrawer> {
           Navigator.pop(context); // Navigate back
           break;
         case 1:
-          selectedWidget =
-              const HomescreenDrawerwidget(); // Set the main screen
+          selectedWidget = const HomeScreen(); // Set the main screen
           break;
         case 2:
           selectedWidget =

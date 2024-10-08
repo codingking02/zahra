@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zahra/view/drawerscreens/service_providers_drawer.dart';
 import 'package:zahra/view/screens/splash_screen.dart';
 
 void main() {
@@ -6,7 +7,7 @@ void main() {
     const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Zahra',
-      home: SplashScreen(),
+      home: ServiceProvidersDrawer(),
     ),
   );
 }

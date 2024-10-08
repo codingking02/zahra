@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
+import 'package:zahra/data/provider/navigation_provider.dart';
 
 Widget zahraButton(
   BuildContext context,
@@ -151,11 +153,10 @@ Widget hospitalButton(String text, Widget gotoWidget, BuildContext context) {
     ),
     child: OutlinedButton(
       onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => gotoWidget,
-          ),
+        final provider =
+            Provider.of<NavigationProvider>(context, listen: false);
+        provider.selectScreen(
+          gotoWidget,
         );
       },
       style: OutlinedButton.styleFrom(
@@ -198,7 +199,6 @@ Widget hospitalButton(String text, Widget gotoWidget, BuildContext context) {
 
 Widget zahragotolocation(
   BuildContext context,
-  Widget screen,
   void Function() ontap,
 ) {
   return Container(
@@ -224,12 +224,6 @@ Widget zahragotolocation(
     ),
     child: ElevatedButton(
       onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => screen,
-          ),
-        );
         ontap();
       },
       style: ElevatedButton.styleFrom(

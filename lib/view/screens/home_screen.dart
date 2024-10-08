@@ -1,11 +1,13 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:flutter/material.dart';
-import 'package:zahra/view/drawerscreens/medicalservices_drawerwidget.dart';
+import 'package:provider/provider.dart';
+import 'package:zahra/data/provider/navigation_provider.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/custom/zahra_fields.dart';
-import 'package:zahra/view/drawerscreens/restaurants_drawer.dart';
+import 'package:zahra/view/screens/homeshooping.dart';
+import 'package:zahra/view/screens/medical_services.dart';
 import 'package:zahra/view/screens/restaurants.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -83,12 +85,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: mediaqueryheight(0.25, context),
                         child: InkWell(
                           onTap: () {
-                            Navigator.push(
+                            final provider = Provider.of<NavigationProvider>(
                               context,
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                    const MedicalservicesDrawerwidget(),
-                              ),
+                              listen: false,
+                            );
+                            provider.selectScreen(
+                              const MedicalServices(),
                             );
                           },
                           child: Image.asset(
@@ -105,11 +107,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: mediaqueryheight(0.25, context),
                         child: InkWell(
                           onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const RestaurantsDrawer(),
-                              ),
+                            final provider = Provider.of<NavigationProvider>(
+                                context,
+                                listen: false);
+                            provider.selectScreen(
+                              const Restaurants(),
                             );
                           },
                           child: Image.asset(
@@ -124,9 +126,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(
                         width: double.infinity,
                         height: mediaqueryheight(0.25, context),
-                        child: Image.asset(
-                          'assets/homeshopping.png',
-                          fit: BoxFit.fill,
+                        child: InkWell(
+                          onTap: () {
+                            final provider = Provider.of<NavigationProvider>(
+                                context,
+                                listen: false);
+                            provider.selectScreen(
+                              const Homeshooping(),
+                            );
+                          },
+                          child: Image.asset(
+                            'assets/homeshopping.png',
+                            fit: BoxFit.fill,
+                          ),
                         ),
                       ),
                       SizedBox(

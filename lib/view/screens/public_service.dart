@@ -3,9 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
-import 'package:zahra/view/drawerscreens/oldbadrcity_drawer.dart';
 import 'package:zahra/view/screens/home_screen.dart';
+import 'package:zahra/view/screens/oldbadrcity.dart';
 
 class PublicService extends StatelessWidget {
   const PublicService({super.key});
@@ -51,7 +50,7 @@ class PublicService extends StatelessWidget {
                     ),
                     hospitalButton(
                       'جهاز مدينه بدر القديم',
-                      const OldbadrcityDrawer(),
+                      const Oldbadrcity(),
                       context,
                     ),
                     SizedBox(
@@ -95,7 +94,7 @@ class PublicService extends StatelessWidget {
                     ),
                     hospitalButton(
                       'شركة الغاز الطبيعي',
-                      const HomescreenDrawerwidget(),
+                      const Oldbadrcity(),
                       context,
                     ),
                     SizedBox(
@@ -139,7 +138,7 @@ class PublicService extends StatelessWidget {
                     ),
                     hospitalButton(
                       'اعمال الكهرباء والدش',
-                      const HomescreenDrawerwidget(),
+                      const Oldbadrcity(),
                       context,
                     ),
                     SizedBox(
@@ -183,7 +182,7 @@ class PublicService extends StatelessWidget {
                     ),
                     hospitalButton(
                       'اعمال النقاشه',
-                      const HomescreenDrawerwidget(),
+                      const Oldbadrcity(),
                       context,
                     ),
                     SizedBox(

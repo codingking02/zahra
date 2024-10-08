@@ -7,12 +7,16 @@ import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/custom/zahra_fields.dart';
 import 'package:zahra/custom/zahra_texts.dart';
+<<<<<<< HEAD
 import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
 import 'package:zahra/view/drawerscreens/oldbadrcity_drawer.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 import 'package:zahra/view/screens/location.dart';
 import 'package:zahra/view/screens/register.dart';
 import 'package:zahra/view/drawerscreens/service_providers_drawer.dart';
+=======
+import 'package:zahra/view/screens/location.dart';
+>>>>>>> 7a066974c35267ac3925a380da957bdf387ec47b
 
 class ServiceProviders extends StatefulWidget {
   const ServiceProviders({super.key});

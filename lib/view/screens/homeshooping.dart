@@ -3,9 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
-import 'package:zahra/view/drawerscreens/hypermarket_drawer.dart';
 import 'package:zahra/view/screens/home_screen.dart';
+import 'package:zahra/view/screens/hypermarket.dart';
 
 class Homeshooping extends StatelessWidget {
   const Homeshooping({super.key});
@@ -48,7 +47,7 @@ class Homeshooping extends StatelessWidget {
                     ),
                     hospitalButton(
                       'هايبر ذاد ماركت',
-                      const HypermarketDrawer(),
+                      const Hypermarket(),
                       context,
                     ),
                     SizedBox(

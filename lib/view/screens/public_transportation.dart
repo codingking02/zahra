@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/drawerscreens/agiadcompany_drawer.dart';
+import 'package:zahra/data/provider/navigation_provider.dart';
 import 'package:zahra/view/screens/agiadcompany.dart';
 
 class PublicTransportation extends StatelessWidget {
@@ -44,11 +45,12 @@ class PublicTransportation extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
-                        Navigator.push(
+                        final provider = Provider.of<NavigationProvider>(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) => const AgiadcompanyDrawer(),
-                          ),
+                          listen: false,
+                        );
+                        provider.selectScreen(
+                          const Agiadcompany(),
                         );
                       },
                       child: getcontainer(

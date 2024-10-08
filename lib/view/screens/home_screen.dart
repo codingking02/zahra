@@ -86,8 +86,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: InkWell(
                           onTap: () {
                             final provider = Provider.of<NavigationProvider>(
-                                context,
-                                listen: false);
+                              context,
+                              listen: false,
+                            );
                             provider.selectScreen(
                               const MedicalServices(),
                             );

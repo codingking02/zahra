@@ -32,7 +32,20 @@ class _MainDrawerState extends State<MainDrawer> {
     );
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: Provider.of<NavigationProvider>(context).currentIndex,
+        elevation: 10,
+        selectedItemColor: const Color(0xffDED0B6),
+        selectedLabelStyle: GoogleFonts.cairo(
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+        ),
+        unselectedItemColor: const Color(0xffF9F3E4),
+        unselectedLabelStyle: GoogleFonts.cairo(
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+        ),
+        backgroundColor: const Color(0xff607274),
+        currentIndex:
+            Provider.of<NavigationProvider>(context).currentNavBarIndex,
         onTap: (index) {
           final provider =
               Provider.of<NavigationProvider>(context, listen: false);
@@ -55,14 +68,13 @@ class _MainDrawerState extends State<MainDrawer> {
         },
         items: [
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/arrowupleft.svg',
-            ),
+            icon: SvgPicture.asset('assets/arrowupleft.svg'),
             label: 'عودة',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/home.svg'),
             label: 'الرئيسية',
+            backgroundColor: const Color(0xffDED0B6),
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/heart.svg'),
@@ -303,11 +315,49 @@ class _MainDrawerState extends State<MainDrawer> {
           ),
         ),
       ),
-      body: Consumer<NavigationProvider>(
-        builder: (context, provider, child) {
-          return provider.currentScreen; // Display the current screen
-        },
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: backgroundColors,
+        ),
+        child: SizedBox(
+          width: double.infinity,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              SizedBox(
+                height: mediaqueryheight(0.05, context),
+              ),
+              Container(
+                margin: EdgeInsets.only(
+                  right: mediaquerywidth(0.1, context),
+                  top: mediaqueryheight(0.03, context),
+                  bottom: mediaqueryheight(0.03, context),
+                ),
+                child: InkWell(
+                  onTap: () {
+                    _scaffoldKey.currentState
+                        ?.openEndDrawer(); // Open the end drawer using the key
+                  },
+                  child: SvgPicture.asset(
+                    'assets/drawer.svg',
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: mediaqueryheight(0.02, context),
+              ),
+              Consumer<NavigationProvider>(
+                builder: (context, provider, child) {
+                  return Expanded(
+                    child: provider.currentScreen,
+                  ); // Display the current screen
+                },
+              ),
+            ],
+          ),
+        ),
       ),
+      //
     );
   }
 }

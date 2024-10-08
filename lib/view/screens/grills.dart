@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/drawerscreens/elasemagrills_drawer.dart';
 import 'package:zahra/view/screens/elasemagrills.dart';
 import 'package:zahra/view/screens/home_screen.dart';
 
@@ -41,7 +40,7 @@ class Grills extends StatelessWidget {
             ),
             hospitalButton(
               'مشويات العاصمة',
-              const ElasemagrillsDrawer(),
+              const Elasemagrills(),
               context,
             ),
             SizedBox(

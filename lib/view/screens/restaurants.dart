@@ -2,11 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:zahra/view/drawerscreens/grills_drawer.dart';
+import 'package:zahra/data/provider/navigation_provider.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/custom/zahra_fields.dart';
+import 'package:zahra/view/screens/grills.dart';
 
 class Restaurants extends StatefulWidget {
   const Restaurants({super.key});
@@ -238,12 +240,13 @@ class _RestaurantsState extends State<Restaurants> {
                                   children: [
                                     InkWell(
                                       onTap: () {
-                                        Navigator.push(
+                                        final provider =
+                                            Provider.of<NavigationProvider>(
                                           context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                const GrillsDrawer(),
-                                          ),
+                                          listen: false,
+                                        );
+                                        provider.selectScreen(
+                                          const Grills(),
                                         );
                                       },
                                       child: Image.asset(

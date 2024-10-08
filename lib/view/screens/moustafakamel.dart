@@ -5,7 +5,6 @@ import 'package:zahra/custom/zahra_colors.dart';
 import 'package:zahra/custom/zahra_texts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/drawerscreens/homescreen_drawerwidget.dart';
 
 class Moustafakamel extends StatefulWidget {
   const Moustafakamel({super.key});
@@ -121,7 +120,6 @@ class _MoustafakamelState extends State<Moustafakamel> {
                       ),
                       zahragotolocation(
                         context,
-                        const HomescreenDrawerwidget(),
                         () {},
                       ),
                       SizedBox(

@@ -2,11 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:zahra/view/drawerscreens/hospital_drawerwidget.dart';
+import 'package:zahra/data/provider/navigation_provider.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/custom/zahra_fields.dart';
+import 'package:zahra/view/screens/homeshooping.dart';
+import 'package:zahra/view/screens/hospitals.dart';
 
 class MedicalServices extends StatefulWidget {
   const MedicalServices({super.key});
@@ -239,12 +242,12 @@ class _MedicalServicesState extends State<MedicalServices> {
                                   children: [
                                     InkWell(
                                       onTap: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                const HospitalDrawerwidget(),
-                                          ),
+                                        final provider =
+                                            Provider.of<NavigationProvider>(
+                                                context,
+                                                listen: false);
+                                        provider.selectScreen(
+                                          const Hospitals(),
                                         );
                                       },
                                       child: Image.asset(

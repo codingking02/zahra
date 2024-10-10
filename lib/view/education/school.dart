@@ -3,11 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/home_screen.dart';
-import 'package:zahra/view/zahratech.dart';
+import 'package:zahra/view/home/home_screen.dart';
+import 'package:zahra/view/education/moustafakamel.dart';
 
-class Cameras extends StatelessWidget {
-  const Cameras({super.key});
+class School extends StatelessWidget {
+  const School({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class Cameras extends StatelessWidget {
             ),
             Center(
               child: Text(
-                'تركيب كاميرات',
+                'مدارس',
                 style: GoogleFonts.cairo(
                   fontSize: 28,
                   fontWeight: FontWeight.w700,
@@ -39,8 +39,8 @@ class Cameras extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'زهرة تكنولوجي',
-              const Zahratech(),
+              'مدرسة مصطفي كامل',
+              const Moustafakamel(),
               context,
             ),
             SizedBox(
@@ -50,18 +50,7 @@ class Cameras extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'م. احمد حسين لتركيب الكاميرات',
-              const HomeScreen(),
-              context,
-            ),
-            SizedBox(
-              height: mediaqueryheight(
-                0.03,
-                context,
-              ),
-            ),
-            hospitalButton(
-              'شركة الفتح',
+              'مدرسة 30 يونيو',
               const HomeScreen(),
               context,
             ),

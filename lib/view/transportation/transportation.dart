@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/home_screen.dart';
-import 'package:zahra/view/train_station.dart';
+import 'package:zahra/view/home/home_screen.dart';
+import 'package:zahra/view/transportation/train_station.dart';
 
 class Transportation extends StatelessWidget {
   const Transportation({super.key});

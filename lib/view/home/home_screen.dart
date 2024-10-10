@@ -6,9 +6,9 @@ import 'package:zahra/data/provider/navigation_provider.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/custom/zahra_fields.dart';
-import 'package:zahra/view/homeshooping.dart';
-import 'package:zahra/view/medical_services.dart';
-import 'package:zahra/view/restaurants.dart';
+import 'package:zahra/view/shop/homeshooping.dart';
+import 'package:zahra/view/medical/medical_services.dart';
+import 'package:zahra/view/food/restaurants.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

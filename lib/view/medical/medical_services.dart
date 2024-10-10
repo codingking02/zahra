@@ -8,16 +8,17 @@ import 'package:zahra/data/provider/navigation_provider.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/custom/zahra_fields.dart';
-import 'package:zahra/view/grills.dart';
+import 'package:zahra/view/shop/homeshooping.dart';
+import 'package:zahra/view/medical/hospitals.dart';
 
-class Restaurants extends StatefulWidget {
-  const Restaurants({super.key});
+class MedicalServices extends StatefulWidget {
+  const MedicalServices({super.key});
 
   @override
-  State<Restaurants> createState() => _RestaurantsState();
+  State<MedicalServices> createState() => _MedicalServicesState();
 }
 
-class _RestaurantsState extends State<Restaurants> {
+class _MedicalServicesState extends State<MedicalServices> {
   // Create a GlobalKey for the Scaffold
   final TextEditingController searchcontroller = TextEditingController();
   final FocusNode focusNode = FocusNode();
@@ -91,7 +92,7 @@ class _RestaurantsState extends State<Restaurants> {
               ),
               Center(
                 child: Text(
-                  'مطاعم وكافيهات',
+                  'خدمات طبيه',
                   style: GoogleFonts.cairo(
                     fontSize: 28,
                     fontWeight: FontWeight.w700,
@@ -138,20 +139,20 @@ class _RestaurantsState extends State<Restaurants> {
                                 scrollDirection: Axis.horizontal,
                                 children: [
                                   pageviewwidgets(
-                                    'assets/restaurant1.png',
-                                    'برجر المندي',
+                                    'assets/pharmacy1.png',
+                                    'صيدليه العاصمة',
                                   ),
                                   pageviewwidgets(
-                                    'assets/restaurant2.png',
-                                    'مشاوي العاصمه',
+                                    'assets/pharmacy2.png',
+                                    'صيدليه زهرة',
                                   ),
                                   pageviewwidgets(
-                                    'assets/restaurant3.png',
-                                    'اكل بيتي',
+                                    'assets/pharmacy3.png',
+                                    'صيدليه د. احمد',
                                   ),
                                   pageviewwidgets(
-                                    'assets/restaurant4.png',
-                                    'بيتزا الصاوي',
+                                    'assets/pharmacy4.png',
+                                    'صيدليه د. خالد',
                                   ),
                                 ],
                               ),
@@ -174,9 +175,10 @@ class _RestaurantsState extends State<Restaurants> {
                                   ),
                                   dotHeight: 20,
                                   dotWidth: 20,
-                                  dotColor: Color.fromRGBO(217, 217, 217, 1),
+                                  dotColor:
+                                      const Color.fromRGBO(217, 217, 217, 1),
                                   activeDotColor:
-                                      Color.fromRGBO(217, 217, 217, 1),
+                                      const Color.fromRGBO(217, 217, 217, 1),
                                 ),
                                 onDotClicked: (index) {
                                   controller.animateToPage(
@@ -242,19 +244,18 @@ class _RestaurantsState extends State<Restaurants> {
                                       onTap: () {
                                         final provider =
                                             Provider.of<NavigationProvider>(
-                                          context,
-                                          listen: false,
-                                        );
+                                                context,
+                                                listen: false);
                                         provider.selectScreen(
-                                          const Grills(),
+                                          const Hospitals(),
                                         );
                                       },
                                       child: Image.asset(
-                                        'assets/grills.png',
+                                        'assets/hospitals.png',
                                       ),
                                     ),
                                     Image.asset(
-                                      'assets/homefood.png',
+                                      'assets/pharmacys.png',
                                     ),
                                   ],
                                 ),

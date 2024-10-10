@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:zahra/data/provider/navigation_provider.dart';
-import 'package:zahra/view/agiadcompany.dart';
-import 'package:zahra/view/badrhospital.dart';
-import 'package:zahra/view/camras.dart';
-import 'package:zahra/view/elasemagrills.dart';
-import 'package:zahra/view/grills.dart';
-import 'package:zahra/view/home_screen.dart';
-import 'package:zahra/view/homeshooping.dart';
-import 'package:zahra/view/hospitals.dart';
-import 'package:zahra/view/hypermarket.dart';
-import 'package:zahra/view/learning_services.dart';
-import 'package:zahra/view/medical_services.dart';
-import 'package:zahra/view/oldbadrcity.dart';
-import 'package:zahra/view/public_service.dart';
-import 'package:zahra/view/public_transportation.dart';
-import 'package:zahra/view/restaurants.dart';
-import 'package:zahra/view/school.dart';
-import 'package:zahra/view/train_station.dart';
-import 'package:zahra/view/transportation.dart';
-import 'package:zahra/view/zahratech.dart';
+import 'package:zahra/view/transportation/agiadcompany.dart';
+import 'package:zahra/view/medical/badrhospital.dart';
+import 'package:zahra/view/services/camras.dart';
+import 'package:zahra/view/food/elasemagrills.dart';
+import 'package:zahra/view/food/grills.dart';
+import 'package:zahra/view/home/home_screen.dart';
+import 'package:zahra/view/shop/homeshooping.dart';
+import 'package:zahra/view/medical/hospitals.dart';
+import 'package:zahra/view/shop/hypermarket.dart';
+import 'package:zahra/view/education/learning_services.dart';
+import 'package:zahra/view/medical/medical_services.dart';
+import 'package:zahra/view/services/oldbadrcity.dart';
+import 'package:zahra/view/services/public_service.dart';
+import 'package:zahra/view/transportation/public_transportation.dart';
+import 'package:zahra/view/food/restaurants.dart';
+import 'package:zahra/view/education/school.dart';
+import 'package:zahra/view/transportation/train_station.dart';
+import 'package:zahra/view/transportation/transportation.dart';
+import 'package:zahra/view/services/zahratech.dart';
 
-import '../view/moustafakamel.dart';
+import '../view/education/moustafakamel.dart';
 
 bool ismedical(BuildContext context) {
   final provider = Provider.of<NavigationProvider>(

@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/home_screen.dart';
-import 'package:zahra/view/oldbadrcity.dart';
+import 'package:zahra/view/home/home_screen.dart';
+import 'package:zahra/view/services/oldbadrcity.dart';
 
 class PublicService extends StatelessWidget {
   const PublicService({super.key});

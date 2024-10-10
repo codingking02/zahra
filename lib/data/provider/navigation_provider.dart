@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:zahra/view/home_screen.dart';
-import 'package:zahra/view/medical_services.dart';
-import 'package:zahra/view/restaurants.dart';
+import 'package:zahra/view/home/home_screen.dart';
+import 'package:zahra/view/medical/medical_services.dart';
+import 'package:zahra/view/food/restaurants.dart';
 
 class NavigationProvider with ChangeNotifier {
   // List of main screens corresponding to the BottomNavigationBar
@@ -11,7 +11,7 @@ class NavigationProvider with ChangeNotifier {
     const HomeScreen(),
   ];
 
-  int _currentNavBarIndex = 0; // Index for the BottomNavigationBar
+  final int _currentNavBarIndex = 0; // Index for the BottomNavigationBar
   int _screenIndex = 0; // Tracks the current screen in the stack
 
   // Getter for the BottomNavigationBar index

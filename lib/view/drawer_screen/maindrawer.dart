@@ -6,14 +6,14 @@ import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
 import 'package:zahra/custom/zahra_function.dart';
 import 'package:zahra/data/provider/navigation_provider.dart';
-import 'package:zahra/view/screens/home_screen.dart';
-import 'package:zahra/view/screens/homeshooping.dart';
-import 'package:zahra/view/screens/learning_services.dart';
-import 'package:zahra/view/screens/medical_services.dart';
-import 'package:zahra/view/screens/public_service.dart';
-import 'package:zahra/view/screens/public_transportation.dart';
-import 'package:zahra/view/screens/restaurants.dart';
-import 'package:zahra/view/screens/splash_screen.dart';
+import 'package:zahra/view/home_screen.dart';
+import 'package:zahra/view/homeshooping.dart';
+import 'package:zahra/view/learning_services.dart';
+import 'package:zahra/view/medical_services.dart';
+import 'package:zahra/view/public_service.dart';
+import 'package:zahra/view/public_transportation.dart';
+import 'package:zahra/view/restaurants.dart';
+import 'package:zahra/view/splash_screen.dart';
 
 class MainDrawer extends StatefulWidget {
   const MainDrawer({super.key});

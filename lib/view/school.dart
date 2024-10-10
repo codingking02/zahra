@@ -3,11 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/screens/elasemagrills.dart';
-import 'package:zahra/view/screens/home_screen.dart';
+import 'package:zahra/view/home_screen.dart';
+import 'package:zahra/view/moustafakamel.dart';
 
-class Grills extends StatelessWidget {
-  const Grills({super.key});
+class School extends StatelessWidget {
+  const School({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class Grills extends StatelessWidget {
             ),
             Center(
               child: Text(
-                'مشويات',
+                'مدارس',
                 style: GoogleFonts.cairo(
                   fontSize: 28,
                   fontWeight: FontWeight.w700,
@@ -39,8 +39,8 @@ class Grills extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'مشويات العاصمة',
-              const Elasemagrills(),
+              'مدرسة مصطفي كامل',
+              const Moustafakamel(),
               context,
             ),
             SizedBox(
@@ -50,18 +50,7 @@ class Grills extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'مشويات مكه',
-              const HomeScreen(),
-              context,
-            ),
-            SizedBox(
-              height: mediaqueryheight(
-                0.03,
-                context,
-              ),
-            ),
-            hospitalButton(
-              'مشويات الملك فاروق',
+              'مدرسة 30 يونيو',
               const HomeScreen(),
               context,
             ),

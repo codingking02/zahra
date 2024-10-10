@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:zahra/view/screens/home_screen.dart';
-import 'package:zahra/view/screens/medical_services.dart';
-import 'package:zahra/view/screens/restaurants.dart';
+import 'package:zahra/view/home_screen.dart';
+import 'package:zahra/view/medical_services.dart';
+import 'package:zahra/view/restaurants.dart';
 
 class NavigationProvider with ChangeNotifier {
   // List of main screens corresponding to the BottomNavigationBar
-  final List<Widget> _mainScreens = [
-    const HomeScreen(),
-    const MedicalServices(),
-    const Restaurants(),
-  ];
 
   // Stack of screens for navigation within the app
-  final List<Widget> _screenStack = [const HomeScreen()];
+  final List<Widget> _screenStack = [
+    const HomeScreen(),
+  ];
 
   int _currentNavBarIndex = 0; // Index for the BottomNavigationBar
   int _screenIndex = 0; // Tracks the current screen in the stack
@@ -24,15 +21,6 @@ class NavigationProvider with ChangeNotifier {
   Widget get currentScreen => _screenStack[_screenIndex];
 
   // Select a new tab in the BottomNavigationBar
-  void selectNavBarIndex(int index) {
-    _currentNavBarIndex = index; // Update the index for BottomNavigationBar
-    _screenStack.clear(); // Clear the stack if switching between main tabs
-    _screenStack.add(
-      _mainScreens[index],
-    ); // Add the selected tab screen
-    _screenIndex = 0; // Reset the screen stack index
-    notifyListeners();
-  }
 
   // Method to push a new screen on top of the stack
   void selectScreen(Widget screen) {

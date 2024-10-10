@@ -3,11 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/screens/home_screen.dart';
-import 'package:zahra/view/screens/moustafakamel.dart';
+import 'package:zahra/view/badrhospital.dart';
+import 'package:zahra/view/home_screen.dart';
 
-class School extends StatelessWidget {
-  const School({super.key});
+class Hospitals extends StatelessWidget {
+  const Hospitals({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class School extends StatelessWidget {
             ),
             Center(
               child: Text(
-                'مدارس',
+                'مستشفيات و وحدات صحية',
                 style: GoogleFonts.cairo(
                   fontSize: 28,
                   fontWeight: FontWeight.w700,
@@ -39,8 +39,8 @@ class School extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'مدرسة مصطفي كامل',
-              const Moustafakamel(),
+              'مستشفي بدر الجامعي',
+              const Badrhospital(),
               context,
             ),
             SizedBox(
@@ -50,7 +50,29 @@ class School extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'مدرسة 30 يونيو',
+              'مستشفي العاصمة',
+              const HomeScreen(),
+              context,
+            ),
+            SizedBox(
+              height: mediaqueryheight(
+                0.03,
+                context,
+              ),
+            ),
+            hospitalButton(
+              'عيادات تخصصية',
+              const HomeScreen(),
+              context,
+            ),
+            SizedBox(
+              height: mediaqueryheight(
+                0.03,
+                context,
+              ),
+            ),
+            hospitalButton(
+              'وحدات صحية',
               const HomeScreen(),
               context,
             ),

@@ -7,7 +7,7 @@ import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/custom/zahra_fields.dart';
 import 'package:zahra/custom/zahra_texts.dart';
-import 'package:zahra/view/screens/location.dart';
+import 'package:zahra/view/location.dart';
 
 class ServiceProviders extends StatefulWidget {
   const ServiceProviders({super.key});

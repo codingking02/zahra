@@ -3,11 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/screens/badrhospital.dart';
-import 'package:zahra/view/screens/home_screen.dart';
+import 'package:zahra/view/home_screen.dart';
+import 'package:zahra/view/train_station.dart';
 
-class Hospitals extends StatelessWidget {
-  const Hospitals({super.key});
+class Transportation extends StatelessWidget {
+  const Transportation({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class Hospitals extends StatelessWidget {
             ),
             Center(
               child: Text(
-                'مستشفيات و وحدات صحية',
+                'نقــل ومواصلات',
                 style: GoogleFonts.cairo(
                   fontSize: 28,
                   fontWeight: FontWeight.w700,
@@ -39,8 +39,8 @@ class Hospitals extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'مستشفي بدر الجامعي',
-              const Badrhospital(),
+              'محطة القطار  الكهربائي',
+              const TrainStation(),
               context,
             ),
             SizedBox(
@@ -50,7 +50,7 @@ class Hospitals extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'مستشفي العاصمة',
+              'مواصلات مدينه بدر ( الخزان)',
               const HomeScreen(),
               context,
             ),
@@ -61,7 +61,7 @@ class Hospitals extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'عيادات تخصصية',
+              'مواصلات العاصمة الادارية الجديدة',
               const HomeScreen(),
               context,
             ),
@@ -72,7 +72,18 @@ class Hospitals extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'وحدات صحية',
+              'مواصلات وسط القاهرة',
+              const HomeScreen(),
+              context,
+            ),
+            SizedBox(
+              height: mediaqueryheight(
+                0.03,
+                context,
+              ),
+            ),
+            hospitalButton(
+              'مواصلات المحافظات',
               const HomeScreen(),
               context,
             ),

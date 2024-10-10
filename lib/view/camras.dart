@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/screens/home_screen.dart';
-import 'package:zahra/view/screens/zahratech.dart';
+import 'package:zahra/view/home_screen.dart';
+import 'package:zahra/view/zahratech.dart';
 
 class Cameras extends StatelessWidget {
   const Cameras({super.key});

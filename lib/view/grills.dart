@@ -3,11 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_buttons.dart';
 import 'package:zahra/custom/zahra_container.dart';
-import 'package:zahra/view/screens/home_screen.dart';
-import 'package:zahra/view/screens/train_station.dart';
+import 'package:zahra/view/elasemagrills.dart';
+import 'package:zahra/view/home_screen.dart';
 
-class Transportation extends StatelessWidget {
-  const Transportation({super.key});
+class Grills extends StatelessWidget {
+  const Grills({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class Transportation extends StatelessWidget {
             ),
             Center(
               child: Text(
-                'نقــل ومواصلات',
+                'مشويات',
                 style: GoogleFonts.cairo(
                   fontSize: 28,
                   fontWeight: FontWeight.w700,
@@ -39,8 +39,8 @@ class Transportation extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'محطة القطار  الكهربائي',
-              const TrainStation(),
+              'مشويات العاصمة',
+              const Elasemagrills(),
               context,
             ),
             SizedBox(
@@ -50,7 +50,7 @@ class Transportation extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'مواصلات مدينه بدر ( الخزان)',
+              'مشويات مكه',
               const HomeScreen(),
               context,
             ),
@@ -61,29 +61,7 @@ class Transportation extends StatelessWidget {
               ),
             ),
             hospitalButton(
-              'مواصلات العاصمة الادارية الجديدة',
-              const HomeScreen(),
-              context,
-            ),
-            SizedBox(
-              height: mediaqueryheight(
-                0.03,
-                context,
-              ),
-            ),
-            hospitalButton(
-              'مواصلات وسط القاهرة',
-              const HomeScreen(),
-              context,
-            ),
-            SizedBox(
-              height: mediaqueryheight(
-                0.03,
-                context,
-              ),
-            ),
-            hospitalButton(
-              'مواصلات المحافظات',
+              'مشويات الملك فاروق',
               const HomeScreen(),
               context,
             ),

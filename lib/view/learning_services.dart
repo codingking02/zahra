@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/data/provider/navigation_provider.dart';
-import 'package:zahra/view/screens/school.dart';
+import 'package:zahra/view/school.dart';
 
 class LearningServices extends StatelessWidget {
   const LearningServices({super.key});

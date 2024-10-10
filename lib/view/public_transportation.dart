@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_container.dart';
 import 'package:zahra/data/provider/navigation_provider.dart';
-import 'package:zahra/view/screens/agiadcompany.dart';
+import 'package:zahra/view/agiadcompany.dart';
 
 class PublicTransportation extends StatelessWidget {
   const PublicTransportation({super.key});

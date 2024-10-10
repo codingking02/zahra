@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zahra/data/provider/navigation_provider.dart';
-import 'package:zahra/view/screens/home_screen.dart';
-import 'package:zahra/view/screens/splash_screen.dart';
+import 'package:zahra/view/home_screen.dart';
+import 'package:zahra/view/splash_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {

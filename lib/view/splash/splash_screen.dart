@@ -20,7 +20,7 @@ class SplashScreen extends StatelessWidget {
             width: double.infinity,
             height: mediaqueryheight(0.85, context),
             child: Image.asset(
-              "assets/splashimage.png",
+              "assets/splashscreen.png",
               fit: BoxFit.fill,
             ),
           ),

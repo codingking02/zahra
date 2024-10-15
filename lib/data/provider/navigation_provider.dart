@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:zahra/view/apply/service_providers.dart';
+import 'package:zahra/view/apply/track_request.dart';
+import 'package:zahra/view/cart/mycart.dart';
 import 'package:zahra/view/home/home_screen.dart';
+import 'package:zahra/view/home/home_screen2.dart';
 import 'package:zahra/view/medical/medical_services.dart';
 import 'package:zahra/view/food/restaurants.dart';
 
@@ -8,7 +12,7 @@ class NavigationProvider with ChangeNotifier {
 
   // Stack of screens for navigation within the app
   final List<Widget> _screenStack = [
-    const HomeScreen(),
+    const Cart(),
   ];
 
   final int _currentNavBarIndex = 0; // Index for the BottomNavigationBar

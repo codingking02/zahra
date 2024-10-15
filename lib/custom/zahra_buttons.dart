@@ -252,3 +252,59 @@ Widget zahragotolocation(
     ),
   );
 }
+
+Widget zahraPayment(
+  BuildContext context,
+  Widget screen,
+  Widget text,
+  void Function() ontap,
+) {
+  return Container(
+    padding: EdgeInsets.zero,
+    width: double.infinity,
+    height: 45,
+    decoration: const BoxDecoration(
+      boxShadow: [
+        BoxShadow(
+          offset: Offset(
+            0,
+            1,
+          ),
+          blurRadius: 4,
+          spreadRadius: 0,
+          color: Color.fromRGBO(
+            0,
+            0,
+            0,
+            0.08,
+          ),
+        ),
+      ],
+    ),
+    child: ElevatedButton(
+      onPressed: () {
+        final provider =
+            Provider.of<NavigationProvider>(listen: false, context);
+        provider.selectScreen(screen);
+        ontap();
+      },
+      style: ElevatedButton.styleFrom(
+        padding: EdgeInsets.zero,
+        foregroundColor: textButtonColor,
+        backgroundColor: bgButtonColor,
+        // textStyle: GoogleFonts.cairo(
+        //   fontSize: 30,
+        //   fontWeight: FontWeight.w700,
+        // ),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(
+              15,
+            ),
+          ),
+        ),
+      ),
+      child: text,
+    ),
+  );
+}

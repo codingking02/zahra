@@ -5,11 +5,12 @@ import 'package:zahra/custom/zahra_boxes.dart';
 import 'package:zahra/custom/zahra_colors.dart';
 
 Widget textFormField(
-    TextEditingController controller,
-    void Function() onFieldSubmitted,
-    String hintText,
-    TextInputType textInputType,
-    TextInputFormatter textInputFormatter) {
+  TextEditingController controller,
+  void Function() onFieldSubmitted,
+  String hintText,
+  TextInputType textInputType,
+  TextInputFormatter textInputFormatter,
+) {
   return TextFormField(
     onFieldSubmitted: (value) => onFieldSubmitted,
     controller: controller,
@@ -18,13 +19,13 @@ Widget textFormField(
     textInputAction: TextInputAction.done,
     cursorColor: const Color.fromRGBO(222, 208, 182, 1),
     enableSuggestions: true,
+    inputFormatters: [
+      textInputFormatter,
+    ],
     style: GoogleFonts.cairo(
       color: const Color.fromRGBO(30, 30, 30, 0.5),
       decorationThickness: 0,
     ),
-    inputFormatters: [
-      textInputFormatter,
-    ],
     decoration: InputDecoration(
       contentPadding: const EdgeInsets.only(
         left: 12,
@@ -238,6 +239,81 @@ Widget zahraSearchField(
         borderRadius: BorderRadius.all(
           Radius.circular(
             40,
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+Widget trackrequestfield(
+  TextEditingController controller,
+  void Function() onFieldSubmitted,
+  Widget prefixicon,
+  Widget suffixicon,
+) {
+  return TextFormField(
+    onFieldSubmitted: (value) => onFieldSubmitted,
+    controller: controller,
+    keyboardType: TextInputType.text,
+    textAlign: TextAlign.right,
+    textInputAction: TextInputAction.done,
+    cursorColor: const Color.fromRGBO(222, 208, 182, 1),
+    enableSuggestions: true,
+    style: GoogleFonts.cairo(
+      color: const Color.fromRGBO(30, 30, 30, 0.5),
+      decorationThickness: 0,
+    ),
+    decoration: InputDecoration(
+      prefixIcon: Padding(
+        padding: const EdgeInsets.only(
+          left: 12,
+        ),
+        child: prefixicon,
+      ),
+      suffixIcon: Padding(
+        padding: const EdgeInsets.only(
+          right: 12,
+        ),
+        child: suffixicon,
+      ),
+      contentPadding: const EdgeInsets.only(
+        left: 12,
+        right: 12,
+      ),
+      fillColor: const Color.fromRGBO(178, 165, 155, 0.2),
+      filled: true,
+      border: InputBorder.none,
+      enabledBorder: const OutlineInputBorder(
+        borderSide: BorderSide(
+          color: Color.fromRGBO(222, 208, 182, 1),
+          width: 1,
+        ),
+        borderRadius: BorderRadius.all(
+          Radius.circular(
+            8,
+          ),
+        ),
+      ),
+      focusedBorder: const OutlineInputBorder(
+        borderSide: BorderSide(
+          color: Color.fromRGBO(222, 208, 182, 1),
+          width: 1,
+        ),
+        borderRadius: BorderRadius.all(
+          Radius.circular(
+            8,
+          ),
+        ),
+      ),
+      disabledBorder: const OutlineInputBorder(
+        borderSide: BorderSide(
+          color: Color.fromRGBO(222, 208, 182, 1),
+          width: 1,
+        ),
+        borderRadius: BorderRadius.all(
+          Radius.circular(
+            8,
           ),
         ),
       ),

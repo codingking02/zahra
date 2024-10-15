@@ -10,14 +10,14 @@ import 'package:zahra/view/shop/homeshooping.dart';
 import 'package:zahra/view/medical/medical_services.dart';
 import 'package:zahra/view/food/restaurants.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class HomeScreen2 extends StatefulWidget {
+  const HomeScreen2({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomeScreen2> createState() => _HomeScreen2State();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreen2State extends State<HomeScreen2> {
   // Create a GlobalKey for the Scaffold
   final TextEditingController searchfieldcontroller = TextEditingController();
   final FocusNode focusNode = FocusNode();
@@ -37,7 +37,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     focusNode.addListener(() {
       setState(() {
@@ -80,7 +79,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(
                         height: mediaqueryheight(0.02, context),
                       ),
-                      SizedBox(
+                      Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Color(0x0000007d),
+                              Color(0x000000B2),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                        ),
                         width: double.infinity,
                         height: mediaqueryheight(0.25, context),
                         child: InkWell(
@@ -94,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             );
                           },
                           child: Image.asset(
-                            'assets/medical.png',
+                            'assets/shoppinghome.png',
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -102,21 +111,30 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(
                         height: mediaqueryheight(0.02, context),
                       ),
-                      SizedBox(
+                      Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Color(0x0000007d),
+                              Color(0x000000B2),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                        ),
                         width: double.infinity,
                         height: mediaqueryheight(0.25, context),
                         child: InkWell(
                           onTap: () {
                             final provider = Provider.of<NavigationProvider>(
-                              context,
-                              listen: false,
-                            );
+                                context,
+                                listen: false);
                             provider.selectScreen(
                               const Restaurants(),
                             );
                           },
                           child: Image.asset(
-                            'assets/cafe.png',
+                            'assets/spices.png',
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -124,7 +142,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(
                         height: mediaqueryheight(0.02, context),
                       ),
-                      SizedBox(
+                      Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Color(0x0000007d),
+                              Color(0x000000B2),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                        ),
                         width: double.infinity,
                         height: mediaqueryheight(0.25, context),
                         child: InkWell(
@@ -138,7 +166,39 @@ class _HomeScreenState extends State<HomeScreen> {
                             );
                           },
                           child: Image.asset(
-                            'assets/homeshopping.png',
+                            'assets/delivery.png',
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: mediaqueryheight(0.02, context),
+                      ),
+                      Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Color(0x0000007d),
+                              Color(0x000000B2),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                        ),
+                        width: double.infinity,
+                        height: mediaqueryheight(0.25, context),
+                        child: InkWell(
+                          onTap: () {
+                            final provider = Provider.of<NavigationProvider>(
+                              context,
+                              listen: false,
+                            );
+                            provider.selectScreen(
+                              const Homeshooping(),
+                            );
+                          },
+                          child: Image.asset(
+                            'assets/plumber.png',
                             fit: BoxFit.fill,
                           ),
                         ),
